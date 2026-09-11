@@ -395,6 +395,109 @@ tr.is-leader td.team-cell::after {
   margin: 0 0 6px;
 }
 
+/* ---------- scenario explorer ---------- */
+
+.scenario-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.scenario-presets button {
+  background: var(--bg-raised);
+  border: 1px solid var(--rule-strong);
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.scenario-presets button:hover,
+.scenario-presets button:focus-visible {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.scenario-result {
+  border: 1px solid var(--rule-strong);
+  border-left: 3px solid var(--fg-dimmer);
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.scenario-result.is-in {
+  border-left-color: var(--green);
+}
+
+.scenario-result.is-out {
+  border-left-color: var(--red);
+}
+
+.scenario-result .result-title {
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+  letter-spacing: 0.02em;
+}
+
+.scenario-result .result-sub {
+  color: var(--fg-dim);
+  font-size: 12px;
+}
+
+.scenario-conflicts {
+  border: 1px solid var(--red);
+  border-left: 3px solid var(--red);
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  background: rgba(217, 88, 79, 0.08);
+}
+
+.scenario-conflicts .conflicts-title {
+  font-weight: 700;
+  color: var(--red);
+  display: block;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 11px;
+}
+
+.scenario-conflicts ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.scenario-conflicts li {
+  margin-bottom: 4px;
+}
+
+#scenario-body input[type="range"] {
+  width: 100%;
+  min-width: 140px;
+  accent-color: var(--gold);
+  background: transparent;
+}
+
+#scenario-body td {
+  vertical-align: middle;
+}
+
+#scenario-body tr.is-pirates td {
+  color: var(--gold);
+}
+
+#scenario-body tr.is-leader .team-cell::after {
+  content: " *";
+  color: var(--fg-dimmer);
+}
+
 /* ---------- narrow screens ---------- */
 
 @media (max-width: 480px) {
@@ -404,5 +507,9 @@ tr.is-leader td.team-cell::after {
 
   .masthead h1 {
     font-size: 14px;
+  }
+
+  #scenario-body input[type="range"] {
+    min-width: 100px;
   }
 }

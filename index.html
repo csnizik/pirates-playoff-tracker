@@ -144,6 +144,40 @@
       <p class="chart-caption" id="histogram-caption"></p>
     </section>
 
+    <section id="scenario" class="section" aria-labelledby="scenario-heading">
+      <h2 id="scenario-heading">Scenario Explorer</h2>
+      <p class="note">
+        Set how Pittsburgh and every other NL team finish the season and see what it does to the race.
+        Ties are resolved with each team's real head-to-head, intradivision, and last-20 record to date;
+        this tool doesn't know which specific games get won, so a tie that all three criteria leave
+        unresolved is reported as a tie, not guessed.
+      </p>
+
+      <div class="scenario-presets" id="scenario-presets">
+        <button type="button" data-preset="run-table">Pirates run the table</button>
+        <button type="button" data-preset="even">Everyone plays .500</button>
+        <button type="button" data-preset="cheapest">Cheapest path in</button>
+        <button type="button" data-preset="pace">Reset to current pace</button>
+      </div>
+
+      <div id="scenario-result" class="scenario-result" role="status" aria-live="polite"></div>
+      <div id="scenario-conflicts" class="scenario-conflicts" hidden></div>
+
+      <div class="table-scroll">
+        <table aria-labelledby="scenario-heading">
+          <thead>
+            <tr>
+              <th scope="col">Team</th>
+              <th scope="col">Finish</th>
+              <th scope="col" class="num">Wins</th>
+              <th scope="col" class="num">Pct</th>
+            </tr>
+          </thead>
+          <tbody id="scenario-body"></tbody>
+        </table>
+      </div>
+    </section>
+
     <footer class="site-footer">
       <p>
         This is a simulation, not a prediction. It runs every remaining NL game from each team's current
@@ -156,6 +190,7 @@
     </footer>
   </div>
 
-  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/app.js" type="module"></script>
+  <script src="assets/js/scenario.js" type="module"></script>
 </body>
 </html>

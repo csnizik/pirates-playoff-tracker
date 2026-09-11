@@ -83,9 +83,11 @@ Top level:
 | `mode` | enum | `IN_RACE`, `CLINCHED`, `ELIMINATED`, `POSTSEASON`, or `OFFSEASON`. Drives which UI state the page renders; the page does not compute this itself. |
 | `pirates` | object | Pittsburgh's current record, remaining games, clinch/elimination flags, and elimination number |
 | `lastNight` | object | previous day's NL scoreboard, with each result's effect on the gap to Pittsburgh |
-| `nlWildCard` | object | full 15-team NL standings pool with wild card specific fields |
+| `nlWildCard` | object | full 15-team NL standings pool with wild card specific fields, plus each team's `divisionRecord` and `last20` for tiebreak resolution |
 | `thresholdTable` | object | for each possible Pittsburgh finish, the most wins each rival can post and still finish behind |
-| `headToHeadNotes` | array | remaining season series between two still-live NL teams, and the guaranteed win floor that creates |
+| `headToHeadNotes` | array | remaining season series between two still-live NL teams, and the guaranteed win floor that creates (curated for the page's narrative section) |
+| `headToHeadRemaining` | array | every NL pair's remaining head-to-head game count, unfiltered — feeds the scenario explorer's feasibility check |
+| `headToHeadRecords` | array | full to-date head-to-head matrix between NL teams — feeds the scenario explorer's tiebreak resolution |
 | `simulation` | object | Monte Carlo results: postseason probability, division probability, wild card seed probabilities, final wins distribution |
 | `postseason` | object or null | populated only in `POSTSEASON` mode |
 | `eliminatedState` | object or null | populated only in `ELIMINATED` mode, the frozen final numbers |
@@ -189,6 +191,41 @@ For every pair of still-live NL teams with games remaining against each other, t
 pipeline surfaces the plain fact that whoever wins that season series is guaranteed at
 least `ceil(games / 2)` of those wins toward their final total — a real floor the
 schedule creates, not a prediction of who wins it.
+
+## Scenario explorer
+
+Client side (`assets/js/scenario.js`), reading `data/current.json` directly — no
+simulation runs in the browser. A slider per NL team sets how many of its remaining
+games it wins; the tool then works out division winners and the wild card top 3 from
+those totals and reports Pittsburgh's outcome.
+
+**Feasibility is checked before anything is reported.** `data/current.json` includes
+`headToHeadRemaining` (every NL pair's remaining game count against each other,
+unfiltered by elimination status). For a pair sharing `n` games left, a team can get at
+most `n` of its chosen wins from that pair; if the combined minimum wins the two teams'
+inputs require from their shared games exceeds `n`, the combination is flagged
+impossible and named explicitly (which two teams, how many games, how many wins each
+input demands) instead of producing a result. This is the same head-to-head-games
+constraint the spec calls out: two rivals can't both go 3-0 against each other in a
+3-game set.
+
+**Ties** are broken with the same three criteria as the nightly simulation — head-to-head
+among the tied teams, then intradivision record, then last-20 record — using
+`headToHeadRecords` (the full to-date head-to-head matrix) and each team's
+`divisionRecord`/`last20`, both included in the payload. Unlike the nightly simulation,
+this tool has no per-game outcomes to fall back on, so a tie that survives all three
+criteria is reported as a tie, not guessed with a coin flip: if Pittsburgh's own
+placement depends on such a tie, the result names the team it's tied with and says so
+plainly.
+
+**Presets**: "Pirates run the table" sets Pittsburgh to win out and every other team to
+its current-pace projection (`round(current win pct x games remaining)`); "Everyone
+plays .500" sets every team, Pittsburgh included, to as close to .500 the rest of the
+way as integer wins allow; "Cheapest path in" holds every other team at its pace
+projection and searches upward from zero for the fewest Pittsburgh wins that still
+produce a postseason spot, honestly reporting "even running the table" territory if
+that's what it takes rather than a softer number. "Reset to current pace" returns every
+slider to the pace projection.
 
 ## Failure handling
 

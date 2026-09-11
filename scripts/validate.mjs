@@ -52,6 +52,32 @@ export function validatePayload(payload) {
     if (t.maxPossibleWins < t.wins) {
       errors.push(`team ${t.teamId}: maxPossibleWins (${t.maxPossibleWins}) < current wins (${t.wins})`);
     }
+    if (!t.divisionRecord || t.divisionRecord.wins < 0 || t.divisionRecord.losses < 0) {
+      errors.push(`team ${t.teamId}: missing or invalid divisionRecord`);
+    }
+    if (!t.last20 || t.last20.wins < 0 || t.last20.losses < 0 || t.last20.wins + t.last20.losses > 20) {
+      errors.push(`team ${t.teamId}: missing or invalid last20 record`);
+    }
+  }
+
+  if (!Array.isArray(payload.headToHeadRemaining)) {
+    errors.push("missing headToHeadRemaining array");
+  } else {
+    for (const h of payload.headToHeadRemaining) {
+      if (h.gamesRemaining < 0) {
+        errors.push(`headToHeadRemaining ${h.teamAId}-${h.teamBId}: negative gamesRemaining`);
+      }
+    }
+  }
+
+  if (!Array.isArray(payload.headToHeadRecords)) {
+    errors.push("missing headToHeadRecords array");
+  } else {
+    for (const h of payload.headToHeadRecords) {
+      if (h.teamAWins < 0 || h.teamBWins < 0) {
+        errors.push(`headToHeadRecords ${h.teamAId}-${h.teamBId}: negative win count`);
+      }
+    }
   }
 
   const sim = payload.simulation;

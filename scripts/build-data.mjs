@@ -19,7 +19,7 @@ import {
   findCompletedResultForTeam,
   isCompletedGame,
 } from "./lib/schedule-utils.mjs";
-import { makePairMap, addPairResult } from "./lib/tiebreak.mjs";
+import { makePairMap, addPairResult, getPairRecord } from "./lib/tiebreak.mjs";
 import {
   maxPossibleWins,
   isClinchedDivision,
@@ -167,6 +167,26 @@ async function buildPayload({ now = new Date() } = {}) {
     })
   );
 
+  // Unfiltered remaining head-to-head counts for every NL pair (not just the
+  // still-live ones), so the scenario explorer can check feasibility of any
+  // combination the user picks, including for a team it otherwise treats as
+  // a long shot.
+  const headToHeadRemaining = computeHeadToHeadNotes(nlTeamsById, nlOnlyRemainingGames, new Map()).map(
+    (note) => ({
+      teamAId: note.teamAId,
+      teamBId: note.teamBId,
+      gamesRemaining: note.gamesRemaining,
+    })
+  );
+
+  // Full to-date head-to-head matrix, used by the scenario explorer to
+  // resolve ties the same way the nightly simulation does.
+  const headToHeadRecords = [...completedH2H.keys()].map((key) => {
+    const [aId, bId] = key.split("-").map(Number);
+    const rec = getPairRecord(completedH2H, aId, bId);
+    return { teamAId: aId, teamBId: bId, teamAWins: rec.aWins, teamBWins: rec.bWins };
+  });
+
   const yesterdayGames = flattenSchedule(raw.yesterdayScheduleResponse);
   const piratesYesterdayResult = findCompletedResultForTeam(yesterdayGames, PIRATES_TEAM_ID);
   const lastNightResults = [];
@@ -207,6 +227,11 @@ async function buildPayload({ now = new Date() } = {}) {
     streak: t.streak,
     clinchedPostseason: isClinchedPostseasonSpot(t, nlTeams),
     eliminatedPostseason: eliminatedById.get(t.teamId),
+    divisionRecord: t.divisionRecord,
+    last20: (() => {
+      const trailing = trailingReal20.get(t.teamId) ?? [];
+      return { wins: trailing.filter(Boolean).length, losses: trailing.filter((w) => !w).length };
+    })(),
   }));
 
   const payload = {
@@ -247,6 +272,8 @@ async function buildPayload({ now = new Date() } = {}) {
 
     thresholdTable,
     headToHeadNotes,
+    headToHeadRemaining,
+    headToHeadRecords,
     simulation,
 
     postseason: null,

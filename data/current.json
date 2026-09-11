@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-11T14:37:29.371Z",
+  "generatedAt": "2026-09-11T16:04:48.616Z",
   "season": 2026,
   "asOfDate": "2026-09-10",
   "mode": "IN_RACE",
@@ -96,7 +96,15 @@
         "magicNumberDivision": 11,
         "streak": "W1",
         "clinchedPostseason": false,
-        "eliminatedPostseason": false
+        "eliminatedPostseason": false,
+        "divisionRecord": {
+          "wins": 30,
+          "losses": 16
+        },
+        "last20": {
+          "wins": 12,
+          "losses": 8
+        }
       },
       {
         "teamId": 143,
@@ -116,7 +124,15 @@
         "magicNumberDivision": null,
         "streak": "L1",
         "clinchedPostseason": false,
-        "eliminatedPostseason": false
+        "eliminatedPostseason": false,
+        "divisionRecord": {
+          "wins": 24,
+          "losses": 19
+        },
+        "last20": {
+          "wins": 13,
+          "losses": 7
+        }
       },
       {
         "teamId": 146,
@@ -136,7 +152,15 @@
         "magicNumberDivision": null,
         "streak": "L3",
         "clinchedPostseason": false,
-        "eliminatedPostseason": false
+        "eliminatedPostseason": false,
+        "divisionRecord": {
+          "wins": 22,
+          "losses": 27
+        },
+        "last20": {
+          "wins": 8,
+          "losses": 12
+        }
       },
       {
         "teamId": 121,
@@ -156,7 +180,15 @@
         "magicNumberDivision": null,
         "streak": "W4",
         "clinchedPostseason": false,
-        "eliminatedPostseason": true
+        "eliminatedPostseason": true,
+        "divisionRecord": {
+          "wins": 24,
+          "losses": 21
+        },
+        "last20": {
+          "wins": 11,
+          "losses": 9
+        }
       },
       {
         "teamId": 120,
@@ -176,7 +208,15 @@
         "magicNumberDivision": null,
         "streak": "L7",
         "clinchedPostseason": false,
-        "eliminatedPostseason": true
+        "eliminatedPostseason": true,
+        "divisionRecord": {
+          "wins": 15,
+          "losses": 32
+        },
+        "last20": {
+          "wins": 6,
+          "losses": 14
+        }
       },
       {
         "teamId": 158,
@@ -196,7 +236,15 @@
         "magicNumberDivision": 5,
         "streak": "W3",
         "clinchedPostseason": false,
-        "eliminatedPostseason": false
+        "eliminatedPostseason": false,
+        "divisionRecord": {
+          "wins": 28,
+          "losses": 15
+        },
+        "last20": {
+          "wins": 13,
+          "losses": 7
+        }
       },
       {
         "teamId": 112,
@@ -216,7 +264,15 @@
         "magicNumberDivision": null,
         "streak": "L4",
         "clinchedPostseason": false,
-        "eliminatedPostseason": false
+        "eliminatedPostseason": false,
+        "divisionRecord": {
+          "wins": 22,
+          "losses": 24
+        },
+        "last20": {
+          "wins": 7,
+          "losses": 13
+        }
       },
       {
         "teamId": 134,
@@ -236,7 +292,15 @@
         "magicNumberDivision": null,
         "streak": "W4",
         "clinchedPostseason": false,
-        "eliminatedPostseason": false
+        "eliminatedPostseason": false,
+        "divisionRecord": {
+          "wins": 22,
+          "losses": 21
+        },
+        "last20": {
+          "wins": 13,
+          "losses": 7
+        }
       },
       {
         "teamId": 138,
@@ -256,7 +320,15 @@
         "magicNumberDivision": null,
         "streak": "L3",
         "clinchedPostseason": false,
-        "eliminatedPostseason": false
+        "eliminatedPostseason": false,
+        "divisionRecord": {
+          "wins": 23,
+          "losses": 23
+        },
+        "last20": {
+          "wins": 7,
+          "losses": 13
+        }
       },
       {
         "teamId": 113,
@@ -276,7 +348,15 @@
         "magicNumberDivision": null,
         "streak": "L3",
         "clinchedPostseason": false,
-        "eliminatedPostseason": true
+        "eliminatedPostseason": true,
+        "divisionRecord": {
+          "wins": 17,
+          "losses": 29
+        },
+        "last20": {
+          "wins": 9,
+          "losses": 11
+        }
       },
       {
         "teamId": 119,
@@ -296,7 +376,15 @@
         "magicNumberDivision": 6,
         "streak": "W7",
         "clinchedPostseason": false,
-        "eliminatedPostseason": false
+        "eliminatedPostseason": false,
+        "divisionRecord": {
+          "wins": 26,
+          "losses": 17
+        },
+        "last20": {
+          "wins": 14,
+          "losses": 6
+        }
       },
       {
         "teamId": 135,
@@ -316,7 +404,15 @@
         "magicNumberDivision": null,
         "streak": "W4",
         "clinchedPostseason": false,
-        "eliminatedPostseason": false
+        "eliminatedPostseason": false,
+        "divisionRecord": {
+          "wins": 22,
+          "losses": 17
+        },
+        "last20": {
+          "wins": 11,
+          "losses": 9
+        }
       },
       {
         "teamId": 109,
@@ -336,7 +432,15 @@
         "magicNumberDivision": null,
         "streak": "L1",
         "clinchedPostseason": false,
-        "eliminatedPostseason": false
+        "eliminatedPostseason": false,
+        "divisionRecord": {
+          "wins": 28,
+          "losses": 18
+        },
+        "last20": {
+          "wins": 12,
+          "losses": 8
+        }
       },
       {
         "teamId": 137,
@@ -356,7 +460,15 @@
         "magicNumberDivision": null,
         "streak": "W3",
         "clinchedPostseason": false,
-        "eliminatedPostseason": true
+        "eliminatedPostseason": true,
+        "divisionRecord": {
+          "wins": 17,
+          "losses": 26
+        },
+        "last20": {
+          "wins": 10,
+          "losses": 10
+        }
       },
       {
         "teamId": 115,
@@ -376,7 +488,15 @@
         "magicNumberDivision": null,
         "streak": "L4",
         "clinchedPostseason": false,
-        "eliminatedPostseason": true
+        "eliminatedPostseason": true,
+        "divisionRecord": {
+          "wins": 15,
+          "losses": 30
+        },
+        "last20": {
+          "wins": 5,
+          "losses": 15
+        }
       }
     ]
   },
@@ -1700,6 +1820,775 @@
       "guaranteedWinsToSeriesWinner": 1,
       "teamAAbbreviation": "WSH",
       "teamBAbbreviation": "PHI"
+    }
+  ],
+  "headToHeadRemaining": [
+    {
+      "teamAId": 119,
+      "teamBId": 137,
+      "gamesRemaining": 6
+    },
+    {
+      "teamAId": 115,
+      "teamBId": 135,
+      "gamesRemaining": 4
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 119,
+      "gamesRemaining": 4
+    },
+    {
+      "teamAId": 121,
+      "teamBId": 143,
+      "gamesRemaining": 4
+    },
+    {
+      "teamAId": 135,
+      "teamBId": 137,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 158,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 119,
+      "teamBId": 146,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 134,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 143,
+      "teamBId": 144,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 137,
+      "teamBId": 138,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 144,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 146,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 134,
+      "teamBId": 158,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 138,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 135,
+      "teamBId": 146,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 113,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 134,
+      "teamBId": 138,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 143,
+      "teamBId": 158,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 119,
+      "teamBId": 135,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 115,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 146,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 144,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 121,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 135,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 138,
+      "teamBId": 158,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 144,
+      "teamBId": 146,
+      "gamesRemaining": 3
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 143,
+      "gamesRemaining": 2
+    }
+  ],
+  "headToHeadRecords": [
+    {
+      "teamAId": 121,
+      "teamBId": 134,
+      "teamAWins": 4,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 120,
+      "teamAWins": 3,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 119,
+      "teamAWins": 7,
+      "teamBWins": 6
+    },
+    {
+      "teamAId": 115,
+      "teamBId": 146,
+      "teamAWins": 2,
+      "teamBWins": 5
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 134,
+      "teamAWins": 6,
+      "teamBWins": 7
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 143,
+      "teamAWins": 3,
+      "teamBWins": 8
+    },
+    {
+      "teamAId": 121,
+      "teamBId": 138,
+      "teamAWins": 2,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 135,
+      "teamBId": 137,
+      "teamAWins": 6,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 144,
+      "teamAWins": 4,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 121,
+      "teamBId": 137,
+      "teamAWins": 5,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 119,
+      "teamBId": 120,
+      "teamAWins": 6,
+      "teamBWins": 0
+    },
+    {
+      "teamAId": 115,
+      "teamBId": 143,
+      "teamAWins": 2,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 134,
+      "teamBId": 135,
+      "teamAWins": 3,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 146,
+      "teamAWins": 3,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 138,
+      "teamAWins": 1,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 137,
+      "teamBId": 143,
+      "teamAWins": 2,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 121,
+      "teamAWins": 4,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 115,
+      "teamBId": 135,
+      "teamAWins": 1,
+      "teamBWins": 8
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 134,
+      "teamAWins": 5,
+      "teamBWins": 5
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 143,
+      "teamAWins": 3,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 158,
+      "teamAWins": 4,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 134,
+      "teamAWins": 3,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 143,
+      "teamAWins": 6,
+      "teamBWins": 1
+    },
+    {
+      "teamAId": 144,
+      "teamBId": 146,
+      "teamAWins": 8,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 119,
+      "teamBId": 121,
+      "teamAWins": 5,
+      "teamBWins": 1
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 137,
+      "teamAWins": 3,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 121,
+      "teamAWins": 7,
+      "teamBWins": 0
+    },
+    {
+      "teamAId": 143,
+      "teamBId": 144,
+      "teamAWins": 3,
+      "teamBWins": 7
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 137,
+      "teamAWins": 3,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 146,
+      "teamBId": 158,
+      "teamAWins": 1,
+      "teamBWins": 5
+    },
+    {
+      "teamAId": 115,
+      "teamBId": 119,
+      "teamAWins": 3,
+      "teamBWins": 10
+    },
+    {
+      "teamAId": 138,
+      "teamBId": 146,
+      "teamAWins": 2,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 144,
+      "teamAWins": 4,
+      "teamBWins": 9
+    },
+    {
+      "teamAId": 119,
+      "teamBId": 137,
+      "teamAWins": 3,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 115,
+      "teamBId": 121,
+      "teamAWins": 4,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 134,
+      "teamBId": 158,
+      "teamAWins": 6,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 119,
+      "teamAWins": 4,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 137,
+      "teamBId": 146,
+      "teamAWins": 2,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 135,
+      "teamAWins": 5,
+      "teamBWins": 5
+    },
+    {
+      "teamAId": 134,
+      "teamBId": 138,
+      "teamAWins": 4,
+      "teamBWins": 6
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 135,
+      "teamAWins": 5,
+      "teamBWins": 1
+    },
+    {
+      "teamAId": 119,
+      "teamBId": 146,
+      "teamAWins": 1,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 115,
+      "teamAWins": 4,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 121,
+      "teamAWins": 4,
+      "teamBWins": 6
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 158,
+      "teamAWins": 2,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 112,
+      "teamAWins": 2,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 143,
+      "teamBId": 146,
+      "teamAWins": 8,
+      "teamBWins": 5
+    },
+    {
+      "teamAId": 119,
+      "teamBId": 138,
+      "teamAWins": 2,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 115,
+      "teamBId": 144,
+      "teamAWins": 0,
+      "teamBWins": 6
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 113,
+      "teamAWins": 7,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 138,
+      "teamBId": 158,
+      "teamAWins": 2,
+      "teamBWins": 8
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 134,
+      "teamAWins": 3,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 135,
+      "teamBId": 138,
+      "teamAWins": 3,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 146,
+      "teamAWins": 4,
+      "teamBWins": 9
+    },
+    {
+      "teamAId": 119,
+      "teamBId": 144,
+      "teamAWins": 1,
+      "teamBWins": 5
+    },
+    {
+      "teamAId": 134,
+      "teamBId": 137,
+      "teamAWins": 3,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 120,
+      "teamAWins": 1,
+      "teamBWins": 5
+    },
+    {
+      "teamAId": 115,
+      "teamBId": 134,
+      "teamAWins": 3,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 144,
+      "teamAWins": 1,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 135,
+      "teamBId": 158,
+      "teamAWins": 4,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 134,
+      "teamBId": 143,
+      "teamAWins": 2,
+      "teamBWins": 5
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 115,
+      "teamAWins": 6,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 143,
+      "teamAWins": 3,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 158,
+      "teamAWins": 4,
+      "teamBWins": 9
+    },
+    {
+      "teamAId": 119,
+      "teamBId": 135,
+      "teamAWins": 7,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 137,
+      "teamAWins": 10,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 121,
+      "teamBId": 146,
+      "teamAWins": 7,
+      "teamBWins": 6
+    },
+    {
+      "teamAId": 119,
+      "teamBId": 158,
+      "teamAWins": 3,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 138,
+      "teamAWins": 5,
+      "teamBWins": 8
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 121,
+      "teamAWins": 4,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 135,
+      "teamBId": 143,
+      "teamAWins": 0,
+      "teamBWins": 6
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 144,
+      "teamAWins": 1,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 135,
+      "teamAWins": 2,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 138,
+      "teamAWins": 6,
+      "teamBWins": 7
+    },
+    {
+      "teamAId": 115,
+      "teamBId": 137,
+      "teamAWins": 7,
+      "teamBWins": 6
+    },
+    {
+      "teamAId": 119,
+      "teamBId": 143,
+      "teamAWins": 4,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 137,
+      "teamBId": 158,
+      "teamAWins": 4,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 137,
+      "teamAWins": 3,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 134,
+      "teamBId": 144,
+      "teamAWins": 1,
+      "teamBWins": 5
+    },
+    {
+      "teamAId": 115,
+      "teamBId": 158,
+      "teamAWins": 1,
+      "teamBWins": 5
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 120,
+      "teamAWins": 2,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 121,
+      "teamBId": 135,
+      "teamAWins": 4,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 135,
+      "teamAWins": 3,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 119,
+      "teamBId": 134,
+      "teamAWins": 5,
+      "teamBWins": 1
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 146,
+      "teamAWins": 0,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 115,
+      "teamAWins": 3,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 134,
+      "teamBId": 146,
+      "teamAWins": 2,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 113,
+      "teamAWins": 4,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 121,
+      "teamBId": 144,
+      "teamAWins": 7,
+      "teamBWins": 6
+    },
+    {
+      "teamAId": 143,
+      "teamBId": 158,
+      "teamAWins": 1,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 137,
+      "teamBId": 144,
+      "teamAWins": 6,
+      "teamBWins": 1
+    },
+    {
+      "teamAId": 121,
+      "teamBId": 143,
+      "teamAWins": 4,
+      "teamBWins": 5
+    },
+    {
+      "teamAId": 144,
+      "teamBId": 158,
+      "teamAWins": 3,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 158,
+      "teamAWins": 3,
+      "teamBWins": 7
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 138,
+      "teamAWins": 5,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 135,
+      "teamBId": 144,
+      "teamAWins": 4,
+      "teamBWins": 3
+    },
+    {
+      "teamAId": 138,
+      "teamBId": 144,
+      "teamAWins": 4,
+      "teamBWins": 2
+    },
+    {
+      "teamAId": 121,
+      "teamBId": 158,
+      "teamAWins": 2,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 115,
+      "teamBId": 120,
+      "teamAWins": 3,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 135,
+      "teamBId": 146,
+      "teamAWins": 3,
+      "teamBWins": 0
+    },
+    {
+      "teamAId": 115,
+      "teamBId": 138,
+      "teamAWins": 2,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 138,
+      "teamBId": 143,
+      "teamAWins": 2,
+      "teamBWins": 4
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 146,
+      "teamAWins": 2,
+      "teamBWins": 1
+    },
+    {
+      "teamAId": 137,
+      "teamBId": 138,
+      "teamAWins": 3,
+      "teamBWins": 0
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 119,
+      "teamAWins": 0,
+      "teamBWins": 3
     }
   ],
   "simulation": {
