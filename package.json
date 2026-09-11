@@ -1,0 +1,13 @@
+{
+  "name": "pirates-playoff-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nightly data pipeline for the Pirates Playoff Tracker GitHub Page. No runtime dependencies; the browser reads a static JSON payload.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build-data": "node scripts/build-data.mjs"
+  }
+}

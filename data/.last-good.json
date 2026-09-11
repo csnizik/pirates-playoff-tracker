@@ -1,0 +1,1762 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-11T13:52:33.836Z",
+  "season": 2026,
+  "asOfDate": "2026-09-10",
+  "mode": "IN_RACE",
+  "pirates": {
+    "teamId": 134,
+    "wins": 74,
+    "losses": 73,
+    "gamesPlayed": 147,
+    "gamesRemaining": 15,
+    "winPct": 0.503,
+    "wildCardGamesBack": "4.5",
+    "divisionGamesBack": "17.0",
+    "thirdSpotHolderTeamId": 135,
+    "eliminationNumberWildCard": 12,
+    "clinchedDivision": false,
+    "clinchedWildcard": false,
+    "clinchedPostseason": false,
+    "eliminatedFromDivision": true,
+    "eliminatedFromWildcard": false,
+    "eliminatedPostseason": false
+  },
+  "lastNight": {
+    "date": "2026-09-10",
+    "results": [
+      {
+        "teamId": 144,
+        "abbreviation": "ATL",
+        "isHome": true,
+        "score": 3,
+        "opponentTeamId": 139,
+        "opponentAbbreviation": "TB",
+        "opponentScore": 1,
+        "won": true,
+        "isPirates": false,
+        "gapToPiratesChange": 0
+      },
+      {
+        "teamId": 143,
+        "abbreviation": "PHI",
+        "isHome": true,
+        "score": 1,
+        "opponentTeamId": 117,
+        "opponentAbbreviation": "HOU",
+        "opponentScore": 2,
+        "won": false,
+        "isPirates": false,
+        "gapToPiratesChange": 1
+      },
+      {
+        "teamId": 134,
+        "abbreviation": "PIT",
+        "isHome": false,
+        "score": 2,
+        "opponentTeamId": 145,
+        "opponentAbbreviation": "CWS",
+        "opponentScore": 0,
+        "won": true,
+        "isPirates": true,
+        "gapToPiratesChange": 0
+      },
+      {
+        "teamId": 115,
+        "abbreviation": "COL",
+        "isHome": false,
+        "score": 3,
+        "opponentTeamId": 147,
+        "opponentAbbreviation": "NYY",
+        "opponentScore": 10,
+        "won": false,
+        "isPirates": false,
+        "gapToPiratesChange": 1
+      }
+    ]
+  },
+  "nlWildCard": {
+    "leagueId": 104,
+    "teams": [
+      {
+        "teamId": 144,
+        "abbreviation": "ATL",
+        "name": "Atlanta Braves",
+        "divisionId": 204,
+        "wins": 86,
+        "losses": 61,
+        "gamesPlayed": 147,
+        "winPct": 0.585,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 101,
+        "isDivisionLeader": true,
+        "wildCardRank": null,
+        "wildCardGamesBack": null,
+        "divisionGamesBack": "-",
+        "magicNumberDivision": 11,
+        "streak": "W1",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": false
+      },
+      {
+        "teamId": 143,
+        "abbreviation": "PHI",
+        "name": "Philadelphia Phillies",
+        "divisionId": 204,
+        "wins": 82,
+        "losses": 65,
+        "gamesPlayed": 147,
+        "winPct": 0.558,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 97,
+        "isDivisionLeader": false,
+        "wildCardRank": 1,
+        "wildCardGamesBack": "+3.5",
+        "divisionGamesBack": "4.0",
+        "magicNumberDivision": null,
+        "streak": "L1",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": false
+      },
+      {
+        "teamId": 146,
+        "abbreviation": "MIA",
+        "name": "Miami Marlins",
+        "divisionId": 204,
+        "wins": 72,
+        "losses": 75,
+        "gamesPlayed": 147,
+        "winPct": 0.49,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 87,
+        "isDivisionLeader": false,
+        "wildCardRank": 6,
+        "wildCardGamesBack": "6.5",
+        "divisionGamesBack": "14.0",
+        "magicNumberDivision": null,
+        "streak": "L3",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": false
+      },
+      {
+        "teamId": 121,
+        "abbreviation": "NYM",
+        "name": "New York Mets",
+        "divisionId": 204,
+        "wins": 68,
+        "losses": 78,
+        "gamesPlayed": 146,
+        "winPct": 0.466,
+        "gamesRemaining": 16,
+        "maxPossibleWins": 84,
+        "isDivisionLeader": false,
+        "wildCardRank": 9,
+        "wildCardGamesBack": "10.0",
+        "divisionGamesBack": "17.5",
+        "magicNumberDivision": null,
+        "streak": "W4",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": true
+      },
+      {
+        "teamId": 120,
+        "abbreviation": "WSH",
+        "name": "Washington Nationals",
+        "divisionId": 204,
+        "wins": 67,
+        "losses": 81,
+        "gamesPlayed": 148,
+        "winPct": 0.453,
+        "gamesRemaining": 14,
+        "maxPossibleWins": 81,
+        "isDivisionLeader": false,
+        "wildCardRank": 10,
+        "wildCardGamesBack": "12.0",
+        "divisionGamesBack": "19.5",
+        "magicNumberDivision": null,
+        "streak": "L7",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": true
+      },
+      {
+        "teamId": 158,
+        "abbreviation": "MIL",
+        "name": "Milwaukee Brewers",
+        "divisionId": 205,
+        "wins": 91,
+        "losses": 56,
+        "gamesPlayed": 147,
+        "winPct": 0.619,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 106,
+        "isDivisionLeader": true,
+        "wildCardRank": null,
+        "wildCardGamesBack": null,
+        "divisionGamesBack": "-",
+        "magicNumberDivision": 5,
+        "streak": "W3",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": false
+      },
+      {
+        "teamId": 112,
+        "abbreviation": "CHC",
+        "name": "Chicago Cubs",
+        "divisionId": 205,
+        "wins": 81,
+        "losses": 66,
+        "gamesPlayed": 147,
+        "winPct": 0.551,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 96,
+        "isDivisionLeader": false,
+        "wildCardRank": 2,
+        "wildCardGamesBack": "+2.5",
+        "divisionGamesBack": "10.0",
+        "magicNumberDivision": null,
+        "streak": "L4",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": false
+      },
+      {
+        "teamId": 134,
+        "abbreviation": "PIT",
+        "name": "Pittsburgh Pirates",
+        "divisionId": 205,
+        "wins": 74,
+        "losses": 73,
+        "gamesPlayed": 147,
+        "winPct": 0.503,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 89,
+        "isDivisionLeader": false,
+        "wildCardRank": 5,
+        "wildCardGamesBack": "4.5",
+        "divisionGamesBack": "17.0",
+        "magicNumberDivision": null,
+        "streak": "W4",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": false
+      },
+      {
+        "teamId": 138,
+        "abbreviation": "STL",
+        "name": "St. Louis Cardinals",
+        "divisionId": 205,
+        "wins": 72,
+        "losses": 75,
+        "gamesPlayed": 147,
+        "winPct": 0.49,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 87,
+        "isDivisionLeader": false,
+        "wildCardRank": 7,
+        "wildCardGamesBack": "6.5",
+        "divisionGamesBack": "19.0",
+        "magicNumberDivision": null,
+        "streak": "L3",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": false
+      },
+      {
+        "teamId": 113,
+        "abbreviation": "CIN",
+        "name": "Cincinnati Reds",
+        "divisionId": 205,
+        "wins": 69,
+        "losses": 77,
+        "gamesPlayed": 146,
+        "winPct": 0.473,
+        "gamesRemaining": 16,
+        "maxPossibleWins": 85,
+        "isDivisionLeader": false,
+        "wildCardRank": 8,
+        "wildCardGamesBack": "9.0",
+        "divisionGamesBack": "21.5",
+        "magicNumberDivision": null,
+        "streak": "L3",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": true
+      },
+      {
+        "teamId": 119,
+        "abbreviation": "LAD",
+        "name": "Los Angeles Dodgers",
+        "divisionId": 203,
+        "wins": 89,
+        "losses": 57,
+        "gamesPlayed": 146,
+        "winPct": 0.61,
+        "gamesRemaining": 16,
+        "maxPossibleWins": 105,
+        "isDivisionLeader": true,
+        "wildCardRank": null,
+        "wildCardGamesBack": null,
+        "divisionGamesBack": "-",
+        "magicNumberDivision": 6,
+        "streak": "W7",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": false
+      },
+      {
+        "teamId": 135,
+        "abbreviation": "SD",
+        "name": "San Diego Padres",
+        "divisionId": 203,
+        "wins": 78,
+        "losses": 68,
+        "gamesPlayed": 146,
+        "winPct": 0.534,
+        "gamesRemaining": 16,
+        "maxPossibleWins": 94,
+        "isDivisionLeader": false,
+        "wildCardRank": 3,
+        "wildCardGamesBack": "-",
+        "divisionGamesBack": "11.0",
+        "magicNumberDivision": null,
+        "streak": "W4",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": false
+      },
+      {
+        "teamId": 109,
+        "abbreviation": "AZ",
+        "name": "Arizona Diamondbacks",
+        "divisionId": 203,
+        "wins": 78,
+        "losses": 69,
+        "gamesPlayed": 147,
+        "winPct": 0.531,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 93,
+        "isDivisionLeader": false,
+        "wildCardRank": 4,
+        "wildCardGamesBack": "0.5",
+        "divisionGamesBack": "11.5",
+        "magicNumberDivision": null,
+        "streak": "L1",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": false
+      },
+      {
+        "teamId": 137,
+        "abbreviation": "SF",
+        "name": "San Francisco Giants",
+        "divisionId": 203,
+        "wins": 62,
+        "losses": 85,
+        "gamesPlayed": 147,
+        "winPct": 0.422,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 77,
+        "isDivisionLeader": false,
+        "wildCardRank": 11,
+        "wildCardGamesBack": "16.5",
+        "divisionGamesBack": "27.5",
+        "magicNumberDivision": null,
+        "streak": "W3",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": true
+      },
+      {
+        "teamId": 115,
+        "abbreviation": "COL",
+        "name": "Colorado Rockies",
+        "divisionId": 203,
+        "wins": 55,
+        "losses": 91,
+        "gamesPlayed": 146,
+        "winPct": 0.377,
+        "gamesRemaining": 16,
+        "maxPossibleWins": 71,
+        "isDivisionLeader": false,
+        "wildCardRank": 12,
+        "wildCardGamesBack": "23.0",
+        "divisionGamesBack": "34.0",
+        "magicNumberDivision": null,
+        "streak": "L4",
+        "clinchedPostseason": false,
+        "eliminatedPostseason": true
+      }
+    ]
+  },
+  "thresholdTable": {
+    "piratesGamesRemaining": 15,
+    "piratesCeiling": 89,
+    "rows": [
+      {
+        "piratesFinishWins": 74,
+        "piratesWinsFromHere": 0,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 1
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 5
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 6
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 1
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 4
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 11
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 75,
+        "piratesWinsFromHere": 1,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 2
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 6
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 7
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 2
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 5
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 12
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 76,
+        "piratesWinsFromHere": 2,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 3
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 7
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 8
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 3
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 6
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 13
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 77,
+        "piratesWinsFromHere": 3,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 4
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 8
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 9
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 4
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 7
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 14
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 78,
+        "piratesWinsFromHere": 4,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 5
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 9
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 10
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 5
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 8
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 79,
+        "piratesWinsFromHere": 5,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 6
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 10
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 11
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 6
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 9
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 80,
+        "piratesWinsFromHere": 6,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 7
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 11
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 12
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 7
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 10
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 1
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 1
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 81,
+        "piratesWinsFromHere": 7,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 8
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 12
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 13
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 8
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 11
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 2
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 2
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 82,
+        "piratesWinsFromHere": 8,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 9
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 13
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 14
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 9
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 12
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 3
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 3
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 83,
+        "piratesWinsFromHere": 9,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 10
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 14
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 14
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 1
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 10
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 13
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 4
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 4
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 84,
+        "piratesWinsFromHere": 10,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 1
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 11
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 14
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 2
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 11
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 14
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 5
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 5
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 85,
+        "piratesWinsFromHere": 11,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 2
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 12
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 16
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 14
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 3
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 12
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 6
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 6
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 86,
+        "piratesWinsFromHere": 12,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 3
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 13
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 16
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 14
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 4
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 13
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 16
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 7
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 7
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 87,
+        "piratesWinsFromHere": 13,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 4
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 14
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 16
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 14
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 5
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 14
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 16
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 8
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 8
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 88,
+        "piratesWinsFromHere": 14,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 1
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 5
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 16
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 14
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 6
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 16
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 9
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 9
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      },
+      {
+        "piratesFinishWins": 89,
+        "piratesWinsFromHere": 15,
+        "rivals": [
+          {
+            "teamId": 144,
+            "maxWinsToStayBehind": 2
+          },
+          {
+            "teamId": 143,
+            "maxWinsToStayBehind": 6
+          },
+          {
+            "teamId": 146,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 121,
+            "maxWinsToStayBehind": 16
+          },
+          {
+            "teamId": 120,
+            "maxWinsToStayBehind": 14
+          },
+          {
+            "teamId": 158,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 112,
+            "maxWinsToStayBehind": 7
+          },
+          {
+            "teamId": 138,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 113,
+            "maxWinsToStayBehind": 16
+          },
+          {
+            "teamId": 119,
+            "maxWinsToStayBehind": 0
+          },
+          {
+            "teamId": 135,
+            "maxWinsToStayBehind": 10
+          },
+          {
+            "teamId": 109,
+            "maxWinsToStayBehind": 10
+          },
+          {
+            "teamId": 137,
+            "maxWinsToStayBehind": 15
+          },
+          {
+            "teamId": 115,
+            "maxWinsToStayBehind": 16
+          }
+        ]
+      }
+    ],
+    "rivals": [
+      {
+        "teamId": 144,
+        "wins": 86,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 101,
+        "isStillAThreat": true
+      },
+      {
+        "teamId": 143,
+        "wins": 82,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 97,
+        "isStillAThreat": true
+      },
+      {
+        "teamId": 146,
+        "wins": 72,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 87,
+        "isStillAThreat": false
+      },
+      {
+        "teamId": 121,
+        "wins": 68,
+        "gamesRemaining": 16,
+        "maxPossibleWins": 84,
+        "isStillAThreat": false
+      },
+      {
+        "teamId": 120,
+        "wins": 67,
+        "gamesRemaining": 14,
+        "maxPossibleWins": 81,
+        "isStillAThreat": false
+      },
+      {
+        "teamId": 158,
+        "wins": 91,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 106,
+        "isStillAThreat": true
+      },
+      {
+        "teamId": 112,
+        "wins": 81,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 96,
+        "isStillAThreat": true
+      },
+      {
+        "teamId": 138,
+        "wins": 72,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 87,
+        "isStillAThreat": false
+      },
+      {
+        "teamId": 113,
+        "wins": 69,
+        "gamesRemaining": 16,
+        "maxPossibleWins": 85,
+        "isStillAThreat": false
+      },
+      {
+        "teamId": 119,
+        "wins": 89,
+        "gamesRemaining": 16,
+        "maxPossibleWins": 105,
+        "isStillAThreat": true
+      },
+      {
+        "teamId": 135,
+        "wins": 78,
+        "gamesRemaining": 16,
+        "maxPossibleWins": 94,
+        "isStillAThreat": true
+      },
+      {
+        "teamId": 109,
+        "wins": 78,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 93,
+        "isStillAThreat": true
+      },
+      {
+        "teamId": 137,
+        "wins": 62,
+        "gamesRemaining": 15,
+        "maxPossibleWins": 77,
+        "isStillAThreat": false
+      },
+      {
+        "teamId": 115,
+        "wins": 55,
+        "gamesRemaining": 16,
+        "maxPossibleWins": 71,
+        "isStillAThreat": false
+      }
+    ]
+  },
+  "headToHeadNotes": [
+    {
+      "teamAId": 119,
+      "teamBId": 137,
+      "gamesRemaining": 6,
+      "guaranteedWinsToSeriesWinner": 3,
+      "teamAAbbreviation": "LAD",
+      "teamBAbbreviation": "SF"
+    },
+    {
+      "teamAId": 115,
+      "teamBId": 135,
+      "gamesRemaining": 4,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "COL",
+      "teamBAbbreviation": "SD"
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 119,
+      "gamesRemaining": 4,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "CIN",
+      "teamBAbbreviation": "LAD"
+    },
+    {
+      "teamAId": 121,
+      "teamBId": 143,
+      "gamesRemaining": 4,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "NYM",
+      "teamBAbbreviation": "PHI"
+    },
+    {
+      "teamAId": 135,
+      "teamBId": 137,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "SD",
+      "teamBAbbreviation": "SF"
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 158,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "CIN",
+      "teamBAbbreviation": "MIL"
+    },
+    {
+      "teamAId": 119,
+      "teamBId": 146,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "LAD",
+      "teamBAbbreviation": "MIA"
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 134,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "CHC",
+      "teamBAbbreviation": "PIT"
+    },
+    {
+      "teamAId": 143,
+      "teamBId": 144,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "PHI",
+      "teamBAbbreviation": "ATL"
+    },
+    {
+      "teamAId": 137,
+      "teamBId": 138,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "SF",
+      "teamBAbbreviation": "STL"
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 144,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "CHC",
+      "teamBAbbreviation": "ATL"
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 146,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "AZ",
+      "teamBAbbreviation": "MIA"
+    },
+    {
+      "teamAId": 134,
+      "teamBId": 158,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "PIT",
+      "teamBAbbreviation": "MIL"
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 138,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "WSH",
+      "teamBAbbreviation": "STL"
+    },
+    {
+      "teamAId": 135,
+      "teamBId": 146,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "SD",
+      "teamBAbbreviation": "MIA"
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 113,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "CHC",
+      "teamBAbbreviation": "CIN"
+    },
+    {
+      "teamAId": 134,
+      "teamBId": 138,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "PIT",
+      "teamBAbbreviation": "STL"
+    },
+    {
+      "teamAId": 143,
+      "teamBId": 158,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "PHI",
+      "teamBAbbreviation": "MIL"
+    },
+    {
+      "teamAId": 119,
+      "teamBId": 135,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "LAD",
+      "teamBAbbreviation": "SD"
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 115,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "AZ",
+      "teamBAbbreviation": "COL"
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 146,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "CHC",
+      "teamBAbbreviation": "MIA"
+    },
+    {
+      "teamAId": 113,
+      "teamBId": 144,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "CIN",
+      "teamBAbbreviation": "ATL"
+    },
+    {
+      "teamAId": 109,
+      "teamBId": 135,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "AZ",
+      "teamBAbbreviation": "SD"
+    },
+    {
+      "teamAId": 138,
+      "teamBId": 158,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "STL",
+      "teamBAbbreviation": "MIL"
+    },
+    {
+      "teamAId": 144,
+      "teamBId": 146,
+      "gamesRemaining": 3,
+      "guaranteedWinsToSeriesWinner": 2,
+      "teamAAbbreviation": "ATL",
+      "teamBAbbreviation": "MIA"
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 143,
+      "gamesRemaining": 2,
+      "guaranteedWinsToSeriesWinner": 1,
+      "teamAAbbreviation": "WSH",
+      "teamBAbbreviation": "PHI"
+    }
+  ],
+  "simulation": {
+    "seed": 1161904089,
+    "iterations": 25000,
+    "postseasonProbability": 0.00756,
+    "divisionWinProbability": 0,
+    "wildCardSeedProbabilities": {
+      "wc1": 0.00004,
+      "wc2": 0.00124,
+      "wc3": 0.00628
+    },
+    "finalWinsDistribution": [
+      {
+        "wins": 75,
+        "probability": 0.00068
+      },
+      {
+        "wins": 76,
+        "probability": 0.00364
+      },
+      {
+        "wins": 77,
+        "probability": 0.01392
+      },
+      {
+        "wins": 78,
+        "probability": 0.04184
+      },
+      {
+        "wins": 79,
+        "probability": 0.09532
+      },
+      {
+        "wins": 80,
+        "probability": 0.15392
+      },
+      {
+        "wins": 81,
+        "probability": 0.1988
+      },
+      {
+        "wins": 82,
+        "probability": 0.19484
+      },
+      {
+        "wins": 83,
+        "probability": 0.15344
+      },
+      {
+        "wins": 84,
+        "probability": 0.0874
+      },
+      {
+        "wins": 85,
+        "probability": 0.04004
+      },
+      {
+        "wins": 86,
+        "probability": 0.01272
+      },
+      {
+        "wins": 87,
+        "probability": 0.0032
+      },
+      {
+        "wins": 88,
+        "probability": 0.00024
+      }
+    ]
+  },
+  "postseason": null,
+  "eliminatedState": null
+}
