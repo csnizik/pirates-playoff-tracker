@@ -174,6 +174,15 @@ Separately, a rival is flagged `isStillAThreat: false` once its own maximum poss
 wins already falls below Pittsburgh's ceiling (best case, running the table) — meaning
 no Pittsburgh outcome, however good, could still be caught by that rival.
 
+Every other NL team is included as a rival, including the three current division
+leaders, each tagged `isDivisionLeader: true`. A division leader's row in this table is
+conditional, not a live requirement: a division leader makes the postseason by winning
+their division regardless of how their win total compares to Pittsburgh's, so their
+`maxWinsToStayBehind` number only becomes relevant in the scenario where they lose their
+own division lead and fall into the wild card pool. The page must present a leader's row
+that way — never as something Pittsburgh currently "needs" from them — or it
+misrepresents the actual playoff mechanism.
+
 ## Head-to-head structural notes
 
 For every pair of still-live NL teams with games remaining against each other, the

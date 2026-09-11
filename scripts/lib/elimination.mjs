@@ -85,6 +85,13 @@ export function eliminationNumberVsThirdSpot(team, thirdSpotHolder) {
  * rest through running the table), the most wins each rival can post and
  * still finish behind, per the spec formula F - 1 - w, capped at the
  * rival's games remaining and floored at zero.
+ *
+ * A current division leader's row is only meaningful conditionally: they
+ * make the postseason by winning their division regardless of how their
+ * win total compares to Pittsburgh's, so this table only matters for them
+ * in the scenario where they lose the division lead and fall into the wild
+ * card pool. Each rival is tagged isDivisionLeader so a consumer of this
+ * data doesn't present a leader's row as a live requirement.
  */
 export function buildThresholdTable(pirates, rivals) {
   const piratesCeiling = maxPossibleWins(pirates);
@@ -109,6 +116,7 @@ export function buildThresholdTable(pirates, rivals) {
       wins: r.wins,
       gamesRemaining: r.gamesRemaining,
       maxPossibleWins: maxPossibleWins(r),
+      isDivisionLeader: Boolean(r.isDivisionLeader),
       isStillAThreat: maxPossibleWins(r) >= piratesCeiling,
     })),
   };

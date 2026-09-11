@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-11T13:52:33.836Z",
+  "generatedAt": "2026-09-11T14:32:31.523Z",
   "season": 2026,
   "asOfDate": "2026-09-10",
   "mode": "IN_RACE",
@@ -1383,6 +1383,7 @@
         "wins": 86,
         "gamesRemaining": 15,
         "maxPossibleWins": 101,
+        "isDivisionLeader": true,
         "isStillAThreat": true
       },
       {
@@ -1390,6 +1391,7 @@
         "wins": 82,
         "gamesRemaining": 15,
         "maxPossibleWins": 97,
+        "isDivisionLeader": false,
         "isStillAThreat": true
       },
       {
@@ -1397,6 +1399,7 @@
         "wins": 72,
         "gamesRemaining": 15,
         "maxPossibleWins": 87,
+        "isDivisionLeader": false,
         "isStillAThreat": false
       },
       {
@@ -1404,6 +1407,7 @@
         "wins": 68,
         "gamesRemaining": 16,
         "maxPossibleWins": 84,
+        "isDivisionLeader": false,
         "isStillAThreat": false
       },
       {
@@ -1411,6 +1415,7 @@
         "wins": 67,
         "gamesRemaining": 14,
         "maxPossibleWins": 81,
+        "isDivisionLeader": false,
         "isStillAThreat": false
       },
       {
@@ -1418,6 +1423,7 @@
         "wins": 91,
         "gamesRemaining": 15,
         "maxPossibleWins": 106,
+        "isDivisionLeader": true,
         "isStillAThreat": true
       },
       {
@@ -1425,6 +1431,7 @@
         "wins": 81,
         "gamesRemaining": 15,
         "maxPossibleWins": 96,
+        "isDivisionLeader": false,
         "isStillAThreat": true
       },
       {
@@ -1432,6 +1439,7 @@
         "wins": 72,
         "gamesRemaining": 15,
         "maxPossibleWins": 87,
+        "isDivisionLeader": false,
         "isStillAThreat": false
       },
       {
@@ -1439,6 +1447,7 @@
         "wins": 69,
         "gamesRemaining": 16,
         "maxPossibleWins": 85,
+        "isDivisionLeader": false,
         "isStillAThreat": false
       },
       {
@@ -1446,6 +1455,7 @@
         "wins": 89,
         "gamesRemaining": 16,
         "maxPossibleWins": 105,
+        "isDivisionLeader": true,
         "isStillAThreat": true
       },
       {
@@ -1453,6 +1463,7 @@
         "wins": 78,
         "gamesRemaining": 16,
         "maxPossibleWins": 94,
+        "isDivisionLeader": false,
         "isStillAThreat": true
       },
       {
@@ -1460,6 +1471,7 @@
         "wins": 78,
         "gamesRemaining": 15,
         "maxPossibleWins": 93,
+        "isDivisionLeader": false,
         "isStillAThreat": true
       },
       {
@@ -1467,6 +1479,7 @@
         "wins": 62,
         "gamesRemaining": 15,
         "maxPossibleWins": 77,
+        "isDivisionLeader": false,
         "isStillAThreat": false
       },
       {
@@ -1474,6 +1487,7 @@
         "wins": 55,
         "gamesRemaining": 16,
         "maxPossibleWins": 71,
+        "isDivisionLeader": false,
         "isStillAThreat": false
       }
     ]

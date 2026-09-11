@@ -145,7 +145,12 @@ async function buildPayload({ now = new Date() } = {}) {
 
   const rivalsForThreshold = nlTeams
     .filter((t) => t.teamId !== PIRATES_TEAM_ID)
-    .map((t) => ({ teamId: t.teamId, wins: t.wins, gamesRemaining: t.gamesRemaining }));
+    .map((t) => ({
+      teamId: t.teamId,
+      wins: t.wins,
+      gamesRemaining: t.gamesRemaining,
+      isDivisionLeader: t.isDivisionLeader,
+    }));
   const thresholdTable = buildThresholdTable(
     { wins: pirates.wins, gamesRemaining: pirates.gamesRemaining },
     rivalsForThreshold
