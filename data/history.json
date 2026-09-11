@@ -1,10 +1,18 @@
 [
   {
     "date": "2026-09-10",
-    "generatedAt": "2026-09-11T21:11:07.389Z",
+    "generatedAt": "2026-09-11T21:39:58.510Z",
     "piratesWins": 74,
     "piratesLosses": 74,
-    "postseasonProbability": 0.00256,
+    "postseasonProbability": 0.00248,
+    "divisionWinProbability": 0
+  },
+  {
+    "date": "2026-09-11",
+    "generatedAt": "2026-09-11T21:40:17.161Z",
+    "piratesWins": 74,
+    "piratesLosses": 74,
+    "postseasonProbability": 0.00248,
     "divisionWinProbability": 0
   }
 ]

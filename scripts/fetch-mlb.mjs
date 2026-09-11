@@ -8,7 +8,7 @@ export const PIRATES_TEAM_ID = 134;
  * /teams response rather than hardcoded, so a future league realignment
  * would not silently break the job.
  */
-export async function fetchRawData({ season, todayDate, yesterdayDate, seasonStartDate, remainingEndDate }) {
+export async function fetchRawData({ season, todayDate, scoreboardDate, seasonStartDate, remainingEndDate }) {
   const teamsResponse = await mlbGet("/teams", { sportId: 1, season });
   const teams = teamsResponse.teams ?? [];
   if (teams.length === 0) {
@@ -47,9 +47,9 @@ export async function fetchRawData({ season, todayDate, yesterdayDate, seasonSta
     standingsTypes: "byDivision",
   });
 
-  const yesterdayScheduleResponse = await mlbGet("/schedule", {
+  const scoreboardScheduleResponse = await mlbGet("/schedule", {
     sportId: 1,
-    date: yesterdayDate,
+    date: scoreboardDate,
     hydrate: "linescore,decisions,team",
   });
 
@@ -61,11 +61,14 @@ export async function fetchRawData({ season, todayDate, yesterdayDate, seasonSta
     gameType: "R",
   });
 
+  // Endpoint upper-bounded at today (not just scoreboardDate) so that any of
+  // today's already-final games count toward head-to-head and last-20
+  // records too, regardless of which day the scoreboard section is showing.
   const seasonToDateScheduleResponse = await mlbGet("/schedule", {
     sportId: 1,
     teamId: nlTeamIds.join(","),
     startDate: seasonStartDate,
-    endDate: yesterdayDate,
+    endDate: todayDate,
     gameType: "R",
   });
 
@@ -78,7 +81,7 @@ export async function fetchRawData({ season, todayDate, yesterdayDate, seasonSta
     wildCardResponse,
     byDivisionNlResponse,
     byDivisionAlResponse,
-    yesterdayScheduleResponse,
+    scoreboardScheduleResponse,
     remainingScheduleResponse,
     seasonToDateScheduleResponse,
   };

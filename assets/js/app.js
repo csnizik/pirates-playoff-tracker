@@ -155,10 +155,19 @@ function renderStatus(payload, history, isNewData) {
   }
 }
 
+function formatStartTime(isoString) {
+  return new Date(isoString).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" });
+}
+
 function renderScoreboard(payload, teamMetaById, isNewData) {
   const tbody = $("scoreboard-body");
   tbody.innerHTML = "";
-  const results = payload.lastNight.results;
+
+  $("scoreboard-heading").textContent = `Scores for ${formatDate(payload.scoreboard.date)}`;
+  $("scoreboard-description").textContent =
+    "Only showing games involving NL teams still alive for a wild card spot as of today. Games not yet final show their start time, not a live score.";
+
+  const results = payload.scoreboard.results;
   if (results.length === 0) {
     $("scoreboard-note").hidden = false;
     return;
@@ -168,37 +177,48 @@ function renderScoreboard(payload, teamMetaById, isNewData) {
   const ordered = [...results].sort((a, b) => {
     if (a.isPirates) return -1;
     if (b.isPirates) return 1;
-    return Math.abs(b.gapToPiratesChange) - Math.abs(a.gapToPiratesChange);
+    if (a.state !== b.state) return a.state === "final" ? -1 : 1;
+    if (a.state === "final") return Math.abs(b.gapToPiratesChange) - Math.abs(a.gapToPiratesChange);
+    return a.abbreviation.localeCompare(b.abbreviation);
   });
 
   for (const r of ordered) {
     const tr = document.createElement("tr");
     const classes = [];
     if (r.isPirates) classes.push("is-pirates");
-    if (isNewData) classes.push("flash");
+    if (isNewData && r.state === "final") classes.push("flash");
     tr.className = classes.join(" ");
 
-    const scoreLine = `${r.won ? "W" : "L"} ${r.score}-${r.opponentScore}`;
     const opp = `${r.isHome ? "vs" : "@"} ${r.opponentAbbreviation}`;
 
+    let scoreCell = "";
+    let scoreClass = "";
     let gapCell = "—";
     let gapClass = "";
-    if (!r.isPirates) {
-      const delta = r.gapToPiratesChange;
-      if (delta > 0) {
-        gapCell = `▲ ${delta.toFixed(1)}`;
-        gapClass = "result-win";
-      } else if (delta < 0) {
-        gapCell = `▼ ${Math.abs(delta).toFixed(1)}`;
-        gapClass = "result-loss";
-      } else {
-        gapCell = "– 0.0";
+
+    if (r.state === "final") {
+      scoreCell = `${r.won ? "W" : "L"} ${r.score}-${r.opponentScore}`;
+      scoreClass = r.won ? "result-win" : "result-loss";
+      if (!r.isPirates) {
+        const delta = r.gapToPiratesChange;
+        if (delta > 0) {
+          gapCell = `▲ ${delta.toFixed(1)}`;
+          gapClass = "result-win";
+        } else if (delta < 0) {
+          gapCell = `▼ ${Math.abs(delta).toFixed(1)}`;
+          gapClass = "result-loss";
+        } else {
+          gapCell = "– 0.0";
+        }
       }
+    } else {
+      scoreCell = formatStartTime(r.startTime);
+      scoreClass = "";
     }
 
     tr.innerHTML = `
       <td>${teamMetaById.get(r.teamId)?.name ?? r.abbreviation}</td>
-      <td class="${r.won ? "result-win" : "result-loss"}">${scoreLine}</td>
+      <td class="${scoreClass}">${scoreCell}</td>
       <td>${opp}</td>
       <td class="num ${gapClass}">${gapCell}</td>
     `;

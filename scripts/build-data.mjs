@@ -16,7 +16,7 @@ import {
   computeGamesRemainingByTeam,
   buildTeamGameLog,
   trailingResults,
-  findCompletedResultForTeam,
+  findGameStatusForTeam,
   isCompletedGame,
 } from "./lib/schedule-utils.mjs";
 import { makePairMap, addPairResult, getPairRecord } from "./lib/tiebreak.mjs";
@@ -52,17 +52,24 @@ function gapDelta(referenceResult, teamResult) {
   return (refWin - teamWin + (teamLoss - refLoss)) / 2;
 }
 
-async function buildPayload({ now = new Date() } = {}) {
+async function buildPayload({ now = new Date(), scoreboardMode } = {}) {
   const todayDate = chicagoDateString(now);
   const yesterdayDate = addDays(todayDate, -1);
   const season = Number(todayDate.slice(0, 4));
   const seasonStartDate = `${season}-03-01`;
   const remainingEndDate = addDays(todayDate, REMAINING_SCHEDULE_WINDOW_DAYS);
 
+  // The scheduled 3am Central cron always wants "yesterday" (today's games
+  // haven't happened yet at 3am). A manual daytime/evening trigger can ask
+  // for "today" instead, once that day's games have actually been played -
+  // see the scoreboard_date input on the nightly workflow.
+  const resolvedScoreboardMode = scoreboardMode === "today" ? "today" : "yesterday";
+  const scoreboardDate = resolvedScoreboardMode === "today" ? todayDate : yesterdayDate;
+
   const raw = await fetchRawData({
     season,
     todayDate,
-    yesterdayDate,
+    scoreboardDate,
     seasonStartDate,
     remainingEndDate,
   });
@@ -187,25 +194,45 @@ async function buildPayload({ now = new Date() } = {}) {
     return { teamAId: aId, teamBId: bId, teamAWins: rec.aWins, teamBWins: rec.bWins };
   });
 
-  const yesterdayGames = flattenSchedule(raw.yesterdayScheduleResponse);
-  const piratesYesterdayResult = findCompletedResultForTeam(yesterdayGames, PIRATES_TEAM_ID);
-  const lastNightResults = [];
+  // Scoreboard section: only still-live NL teams (not yet mathematically
+  // eliminated), for whichever day scoreboardDate resolved to. A team with
+  // no game that day is omitted; a game already final shows the score; a
+  // game not yet started shows its scheduled time instead of a score. A
+  // game in progress is omitted too - this is a once-a-day digest, not a
+  // live scoreboard, so an in-progress result is only ever reported once
+  // it is final.
+  const scoreboardGames = flattenSchedule(raw.scoreboardScheduleResponse);
+  const piratesScoreboardStatus = findGameStatusForTeam(scoreboardGames, PIRATES_TEAM_ID);
+  const piratesFinalResult = piratesScoreboardStatus?.state === "final" ? piratesScoreboardStatus : null;
+
+  const scoreboardResults = [];
   for (const t of nlTeams) {
-    const result = findCompletedResultForTeam(yesterdayGames, t.teamId);
-    if (!result) continue;
+    if (eliminatedById.get(t.teamId)) continue;
+    const status = findGameStatusForTeam(scoreboardGames, t.teamId);
+    if (!status || status.state === "inProgress") continue;
+
     const isPirates = t.teamId === PIRATES_TEAM_ID;
-    lastNightResults.push({
+    const base = {
       teamId: t.teamId,
       abbreviation: teamMetaById.get(t.teamId)?.abbreviation ?? null,
-      isHome: result.isHome,
-      score: result.score,
-      opponentTeamId: result.opponentTeamId,
-      opponentAbbreviation: teamMetaById.get(result.opponentTeamId)?.abbreviation ?? null,
-      opponentScore: result.opponentScore,
-      won: result.won,
+      isHome: status.isHome,
+      opponentTeamId: status.opponentTeamId,
+      opponentAbbreviation: teamMetaById.get(status.opponentTeamId)?.abbreviation ?? null,
       isPirates,
-      gapToPiratesChange: isPirates ? 0 : gapDelta(piratesYesterdayResult, result),
-    });
+      state: status.state,
+    };
+
+    if (status.state === "final") {
+      scoreboardResults.push({
+        ...base,
+        score: status.score,
+        opponentScore: status.opponentScore,
+        won: status.won,
+        gapToPiratesChange: isPirates ? 0 : gapDelta(piratesFinalResult, status),
+      });
+    } else {
+      scoreboardResults.push({ ...base, startTime: status.gameDate });
+    }
   }
 
   const nlWildCardTeams = nlTeams.map((t) => ({
@@ -238,7 +265,7 @@ async function buildPayload({ now = new Date() } = {}) {
     schemaVersion: SCHEMA_VERSION,
     generatedAt: now.toISOString(),
     season,
-    asOfDate: yesterdayDate,
+    asOfDate: scoreboardDate,
     mode,
 
     pirates: {
@@ -260,9 +287,9 @@ async function buildPayload({ now = new Date() } = {}) {
       eliminatedPostseason: piratesEliminated,
     },
 
-    lastNight: {
-      date: yesterdayDate,
-      results: lastNightResults,
+    scoreboard: {
+      date: scoreboardDate,
+      results: scoreboardResults,
     },
 
     nlWildCard: {
@@ -325,9 +352,11 @@ function appendHistory(payload) {
 }
 
 async function main() {
+  const scoreboardMode = process.env.SCOREBOARD_DATE_MODE === "today" ? "today" : "yesterday";
+
   let payload;
   try {
-    payload = await buildPayload();
+    payload = await buildPayload({ scoreboardMode });
   } catch (err) {
     console.error("Data fetch/build failed, leaving existing data/current.json untouched.");
     console.error(err.stack ?? err.message);
@@ -347,7 +376,9 @@ async function main() {
   writeFileSync(path.join(DATA_DIR, ".last-good.json"), json);
   appendHistory(payload);
 
-  console.log(`Wrote data/current.json (mode=${payload.mode}, asOfDate=${payload.asOfDate})`);
+  console.log(
+    `Wrote data/current.json (mode=${payload.mode}, asOfDate=${payload.asOfDate}, scoreboard=${scoreboardMode})`
+  );
   console.log(`Pirates: ${payload.pirates.wins}-${payload.pirates.losses}, ${payload.pirates.gamesRemaining} remaining`);
   console.log(`Wild card GB: ${payload.pirates.wildCardGamesBack}, elimination number vs 3rd spot: ${payload.pirates.eliminationNumberWildCard}`);
   console.log(`Postseason probability: ${(payload.simulation.postseasonProbability * 100).toFixed(2)}%`);

@@ -10,7 +10,22 @@ on:
     # running past the DST rollback (e.g. into the postseason), the cron
     # expression should be revisited.
     - cron: "0 8 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      scoreboard_date:
+        description: >-
+          Which day's games to show in the "Scores for" section. The
+          scheduled run always uses "yesterday" regardless of this input
+          (today's games haven't happened yet at 3am). Use "today" for an
+          ad-hoc run later in the day, once today's games are underway or
+          final, to pull today's results instead of waiting for the
+          overnight run.
+        required: false
+        type: choice
+        options:
+          - yesterday
+          - today
+        default: yesterday
 
 permissions:
   contents: write
@@ -38,6 +53,13 @@ jobs:
         # data/current.json and data/.last-good.json from scratch each time,
         # and de-duplicates data/history.json by date, so re-running it is a
         # no-op if nothing upstream has changed.
+        #
+        # SCOREBOARD_DATE_MODE is only ever "today" for a manual dispatch
+        # that explicitly asked for it; github.event.inputs is unset on a
+        # schedule-triggered run, so the || fallback keeps the automatic
+        # 3am run on "yesterday" no matter what.
+        env:
+          SCOREBOARD_DATE_MODE: ${{ github.event.inputs.scoreboard_date || 'yesterday' }}
         run: node scripts/build-data.mjs
 
       - name: Commit and push if data changed

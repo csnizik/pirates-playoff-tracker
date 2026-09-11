@@ -79,10 +79,10 @@ Top level:
 | `schemaVersion` | number | currently `1` |
 | `generatedAt` | ISO string | when this file was built |
 | `season` | number | MLB season year |
-| `asOfDate` | YYYY-MM-DD | the date whose results this payload reflects ("yesterday" in America/Chicago at build time) |
+| `asOfDate` | YYYY-MM-DD | the date the `scoreboard` section covers (see below) |
 | `mode` | enum | `IN_RACE`, `CLINCHED`, `ELIMINATED`, `POSTSEASON`, or `OFFSEASON`. Drives which UI state the page renders; the page does not compute this itself. |
-| `pirates` | object | Pittsburgh's current record, remaining games, clinch/elimination flags, and elimination number |
-| `lastNight` | object | previous day's NL scoreboard, with each result's effect on the gap to Pittsburgh |
+| `pirates` | object | Pittsburgh's current record, remaining games, clinch/elimination flags, and elimination number. Always reflects live current standings regardless of `asOfDate`. |
+| `scoreboard` | object | that day's NL scoreboard (still-live teams only), with each final result's effect on the gap to Pittsburgh, and a scheduled start time instead of a score for games not yet final |
 | `nlWildCard` | object | full 15-team NL standings pool with wild card specific fields, plus each team's `divisionRecord` and `last20` for tiebreak resolution |
 | `thresholdTable` | object | for each possible Pittsburgh finish, the most wins each rival can post and still finish behind |
 | `headToHeadNotes` | array | remaining season series between two still-live NL teams, and the guaranteed win floor that creates (curated for the page's narrative section) |
@@ -99,6 +99,27 @@ it's the authoritative reference for exact field names.
 (`{ date, generatedAt, piratesWins, piratesLosses, postseasonProbability,
 divisionWinProbability }`), appended to nightly and de-duplicated by date so re-running
 the same day is safe.
+
+### Which day the scoreboard section covers
+
+`pirates` and `nlWildCard` always reflect live current standings, whatever time the
+build runs. `scoreboard` (and `asOfDate`) are pinned to one specific day, because a
+day's games move from not-yet-played to final over the course of that day, and the
+scoreboard needs to render each game consistently rather than mixing states from
+different fetches.
+
+The scheduled 3am America/Chicago run always uses **yesterday** — at 3am, today's games
+haven't been played yet, so "yesterday" is the last day with anything to report. A
+manual run (`workflow_dispatch`, or `node scripts/build-data.mjs` with
+`SCOREBOARD_DATE_MODE=today` set) can ask for **today** instead, once today's games are
+underway or finished, so a mid-day or evening check-in shows today's results rather than
+waiting for the overnight run. This is exactly what running the workflow by hand from
+the Actions tab with the "today" option gets you.
+
+Within that chosen day, each still-live NL team's game (if it has one) renders as one of:
+a final score, a scheduled start time if the game hasn't started yet, or nothing at all
+if the game is currently in progress — this is a once-a-day digest, not a live
+scoreboard, so an in-progress game is only ever reported once it reaches final.
 
 ## Simulation methodology
 

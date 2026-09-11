@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-11T21:11:07.389Z",
+  "generatedAt": "2026-09-11T21:40:17.161Z",
   "season": 2026,
-  "asOfDate": "2026-09-10",
+  "asOfDate": "2026-09-11",
   "mode": "IN_RACE",
   "pirates": {
     "teamId": 134,
@@ -22,56 +22,114 @@
     "eliminatedFromWildcard": false,
     "eliminatedPostseason": false
   },
-  "lastNight": {
-    "date": "2026-09-10",
+  "scoreboard": {
+    "date": "2026-09-11",
     "results": [
       {
         "teamId": 144,
         "abbreviation": "ATL",
         "isHome": true,
-        "score": 3,
-        "opponentTeamId": 139,
-        "opponentAbbreviation": "TB",
-        "opponentScore": 1,
-        "won": true,
+        "opponentTeamId": 143,
+        "opponentAbbreviation": "PHI",
         "isPirates": false,
-        "gapToPiratesChange": 0
+        "state": "preview",
+        "startTime": "2026-09-11T23:15:00Z"
       },
       {
         "teamId": 143,
         "abbreviation": "PHI",
-        "isHome": true,
-        "score": 1,
-        "opponentTeamId": 117,
-        "opponentAbbreviation": "HOU",
-        "opponentScore": 2,
-        "won": false,
+        "isHome": false,
+        "opponentTeamId": 144,
+        "opponentAbbreviation": "ATL",
         "isPirates": false,
-        "gapToPiratesChange": 1
+        "state": "preview",
+        "startTime": "2026-09-11T23:15:00Z"
+      },
+      {
+        "teamId": 146,
+        "abbreviation": "MIA",
+        "isHome": true,
+        "opponentTeamId": 119,
+        "opponentAbbreviation": "LAD",
+        "isPirates": false,
+        "state": "preview",
+        "startTime": "2026-09-11T23:10:00Z"
+      },
+      {
+        "teamId": 158,
+        "abbreviation": "MIL",
+        "isHome": true,
+        "opponentTeamId": 113,
+        "opponentAbbreviation": "CIN",
+        "isPirates": false,
+        "state": "preview",
+        "startTime": "2026-09-11T23:45:00Z"
+      },
+      {
+        "teamId": 112,
+        "abbreviation": "CHC",
+        "isHome": true,
+        "opponentTeamId": 134,
+        "opponentAbbreviation": "PIT",
+        "isPirates": false,
+        "state": "final",
+        "score": 12,
+        "opponentScore": 2,
+        "won": true,
+        "gapToPiratesChange": -1
       },
       {
         "teamId": 134,
         "abbreviation": "PIT",
         "isHome": false,
-        "score": 2,
-        "opponentTeamId": 145,
-        "opponentAbbreviation": "CWS",
-        "opponentScore": 0,
-        "won": true,
+        "opponentTeamId": 112,
+        "opponentAbbreviation": "CHC",
         "isPirates": true,
+        "state": "final",
+        "score": 2,
+        "opponentScore": 12,
+        "won": false,
         "gapToPiratesChange": 0
       },
       {
-        "teamId": 115,
-        "abbreviation": "COL",
-        "isHome": false,
-        "score": 3,
-        "opponentTeamId": 147,
-        "opponentAbbreviation": "NYY",
-        "opponentScore": 10,
-        "won": false,
+        "teamId": 138,
+        "abbreviation": "STL",
+        "isHome": true,
+        "opponentTeamId": 145,
+        "opponentAbbreviation": "CWS",
         "isPirates": false,
-        "gapToPiratesChange": 1
+        "state": "preview",
+        "startTime": "2026-09-12T00:15:00Z"
+      },
+      {
+        "teamId": 119,
+        "abbreviation": "LAD",
+        "isHome": false,
+        "opponentTeamId": 146,
+        "opponentAbbreviation": "MIA",
+        "isPirates": false,
+        "state": "preview",
+        "startTime": "2026-09-11T23:10:00Z"
+      },
+      {
+        "teamId": 135,
+        "abbreviation": "SD",
+        "isHome": false,
+        "opponentTeamId": 137,
+        "opponentAbbreviation": "SF",
+        "isPirates": false,
+        "state": "preview",
+        "startTime": "2026-09-12T02:15:00Z"
+      },
+      {
+        "teamId": 109,
+        "abbreviation": "AZ",
+        "isHome": true,
+        "opponentTeamId": 140,
+        "opponentAbbreviation": "TEX",
+        "isPirates": false,
+        "state": "preview",
+        "startTime": "2026-09-12T01:40:00Z"
       }
     ]
   },
@@ -270,8 +328,8 @@
           "losses": 24
         },
         "last20": {
-          "wins": 7,
-          "losses": 13
+          "wins": 8,
+          "losses": 12
         }
       },
       {
@@ -298,8 +356,8 @@
           "losses": 22
         },
         "last20": {
-          "wins": 13,
-          "losses": 7
+          "wins": 12,
+          "losses": 8
         }
       },
       {
@@ -2009,7 +2067,7 @@
     {
       "teamAId": 112,
       "teamBId": 134,
-      "teamAWins": 5,
+      "teamAWins": 6,
       "teamBWins": 5
     },
     {
@@ -2532,11 +2590,11 @@
   "simulation": {
     "seed": 1161904089,
     "iterations": 25000,
-    "postseasonProbability": 0.00256,
+    "postseasonProbability": 0.00248,
     "divisionWinProbability": 0,
     "wildCardSeedProbabilities": {
       "wc1": 0,
-      "wc2": 0.00028,
+      "wc2": 0.0002,
       "wc3": 0.00228
     },
     "finalWinsDistribution": [

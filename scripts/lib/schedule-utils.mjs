@@ -112,23 +112,40 @@ export function computeGamesRemainingByTeam(remainingGames) {
 }
 
 /**
- * A team's result from a single day's schedule, or null if it did not play
- * a completed game that day (off day, or a postponement with no makeup yet).
+ * A team's game status from a single day's schedule, or null if it has no
+ * game that day at all. Three states a consumer should render differently:
+ *   "final"    - game is actually over (see isCompletedGame); score fields set.
+ *   "preview"  - not started yet; gameDate (ISO instant) is the scheduled start.
+ *   "inProgress" - anything else (live, suspended, a postponed ghost entry
+ *                  with no makeup reflected yet). Deliberately not detailed
+ *                  further: this tracker is a once-a-day digest, not a
+ *                  live scoreboard, so in-progress games are only ever
+ *                  reported once they reach "final".
  */
-export function findCompletedResultForTeam(dayGames, teamId) {
-  const game = dayGames
-    .filter(isCompletedGame)
-    .find((g) => g.teams.home.team.id === teamId || g.teams.away.team.id === teamId);
+export function findGameStatusForTeam(dayGames, teamId) {
+  const game = dayGames.find(
+    (g) => g.teams.home.team.id === teamId || g.teams.away.team.id === teamId
+  );
   if (!game) return null;
+
   const isHome = game.teams.home.team.id === teamId;
   const self = isHome ? game.teams.home : game.teams.away;
   const opponent = isHome ? game.teams.away : game.teams.home;
-  return {
-    gamePk: game.gamePk,
-    isHome,
-    score: self.score,
-    opponentTeamId: opponent.team.id,
-    opponentScore: opponent.score,
-    won: self.score > opponent.score,
-  };
+  const base = { gamePk: game.gamePk, isHome, opponentTeamId: opponent.team.id };
+
+  if (isCompletedGame(game)) {
+    return {
+      ...base,
+      state: "final",
+      score: self.score,
+      opponentScore: opponent.score,
+      won: self.score > opponent.score,
+    };
+  }
+
+  if (game.status?.abstractGameState === "Preview") {
+    return { ...base, state: "preview", gameDate: game.gameDate };
+  }
+
+  return { ...base, state: "inProgress" };
 }
