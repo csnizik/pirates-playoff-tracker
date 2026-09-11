@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pirates Playoff Tracker</title>
+  <meta name="description" content="Pittsburgh's NL wild card chase, tracked nightly: odds, elimination number, and the math behind them." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="masthead">
+      <div class="masthead-row">
+        <h1>Pittsburgh Pirates <span class="dim">// Playoff Tracker</span></h1>
+        <div class="meta">
+          AS OF <time id="as-of-date">--</time> &middot; UPDATED <time id="generated-at">--</time>
+        </div>
+      </div>
+    </header>
+
+    <div id="stale-banner" class="banner" role="status" hidden>
+      DATA IS STALE &mdash; last refreshed <span id="stale-hours">--</span> hours ago. The
+      nightly job may have failed; check the Actions tab.
+    </div>
+
+    <section id="status" class="section" aria-labelledby="status-heading">
+      <h2 id="status-heading">Status</h2>
+      <div id="mode-banner" class="mode-banner" hidden></div>
+      <div class="stat-grid" id="stat-grid">
+        <div class="stat">
+          <span class="stat-label">Record</span>
+          <span class="stat-value" id="stat-record">&ndash;</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">WC Games Back</span>
+          <span class="stat-value" id="stat-gb">&ndash;</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Games Remaining</span>
+          <span class="stat-value" id="stat-gr">&ndash;</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Elimination #</span>
+          <span class="stat-value" id="stat-elim">&ndash;</span>
+        </div>
+        <div class="stat stat-accent">
+          <span class="stat-label">Playoff Odds</span>
+          <span class="stat-value" id="stat-odds">&ndash;</span>
+          <span class="stat-delta" id="stat-odds-delta"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="scoreboard" class="section" aria-labelledby="scoreboard-heading">
+      <h2 id="scoreboard-heading">Last Night</h2>
+      <p class="note" id="scoreboard-note">No completed games for the tracked field on this date.</p>
+      <div class="table-scroll">
+        <table aria-labelledby="scoreboard-heading">
+          <thead>
+            <tr>
+              <th scope="col">Team</th>
+              <th scope="col">Score</th>
+              <th scope="col">Opp</th>
+              <th scope="col" class="num">Gap &Delta;</th>
+            </tr>
+          </thead>
+          <tbody id="scoreboard-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="standings" class="section" aria-labelledby="standings-heading">
+      <h2 id="standings-heading">NL Wild Card Standings</h2>
+      <p class="note" id="standings-note">* division leader &mdash; makes the postseason by winning the division, independent of this table.</p>
+      <div class="table-scroll">
+        <table aria-labelledby="standings-heading" aria-describedby="standings-note">
+          <thead>
+            <tr>
+              <th scope="col" class="team-cell">Team</th>
+              <th scope="col" class="num">W</th>
+              <th scope="col" class="num">L</th>
+              <th scope="col" class="num">PCT</th>
+              <th scope="col" class="num">WCGB</th>
+              <th scope="col" class="num">GR</th>
+              <th scope="col" class="num">Max W</th>
+            </tr>
+          </thead>
+          <tbody id="standings-body"></tbody>
+        </table>
+      </div>
+
+      <h3 id="threshold-heading">Threshold Table</h3>
+      <p class="note" id="threshold-note">
+        For each possible Pittsburgh finish, the most wins a wild card pool rival can post and still finish
+        behind. Division leaders are excluded from this table since they make the postseason by winning their
+        division, not by outlasting Pittsburgh in wins &mdash; see the note below the table for their numbers.
+      </p>
+      <div class="table-scroll">
+        <table aria-labelledby="threshold-heading" aria-describedby="threshold-note">
+          <thead>
+            <tr id="threshold-head"></tr>
+          </thead>
+          <tbody id="threshold-body"></tbody>
+        </table>
+      </div>
+      <p class="note" id="threshold-leaders-note"></p>
+
+      <h3>Schedule Notes</h3>
+      <ul id="h2h-notes"></ul>
+    </section>
+
+    <section id="simulation" class="section" aria-labelledby="sim-heading">
+      <h2 id="sim-heading">Monte Carlo Odds</h2>
+      <div class="sim-grid">
+        <div class="stat sim-big">
+          <span class="stat-label">Postseason</span>
+          <span class="stat-value" id="sim-postseason">&ndash;</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">NL Central</span>
+          <span class="stat-value" id="sim-division">&ndash;</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">WC1</span>
+          <span class="stat-value" id="sim-wc1">&ndash;</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">WC2</span>
+          <span class="stat-value" id="sim-wc2">&ndash;</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">WC3</span>
+          <span class="stat-value" id="sim-wc3">&ndash;</span>
+        </div>
+      </div>
+      <p class="note" id="sim-meta"></p>
+
+      <h3>Probability Trend</h3>
+      <div class="chart-wrap" id="sparkline-wrap"></div>
+      <p class="chart-caption" id="sparkline-caption"></p>
+
+      <h3>Projected Final Wins</h3>
+      <div class="chart-wrap" id="histogram-wrap"></div>
+      <p class="chart-caption" id="histogram-caption"></p>
+    </section>
+
+    <footer class="site-footer">
+      <p>
+        This is a simulation, not a prediction. It runs every remaining NL game from each team's current
+        winning percentage and ignores starting pitchers, injuries, rest, and roster moves.
+      </p>
+      <p>
+        Data from the unofficial MLB Stats API, refreshed nightly.
+        <a href="https://github.com/csnizik/pirates-playoff-tracker#readme">Methodology and source</a>.
+      </p>
+    </footer>
+  </div>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
