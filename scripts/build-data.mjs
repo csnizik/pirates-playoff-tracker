@@ -271,6 +271,7 @@ function appendHistory(payload) {
       history = [];
     }
   }
+  const existing = history.find((h) => h.date === payload.asOfDate);
   const entry = {
     date: payload.asOfDate,
     generatedAt: payload.generatedAt,
@@ -279,8 +280,19 @@ function appendHistory(payload) {
     postseasonProbability: payload.simulation.postseasonProbability,
     divisionWinProbability: payload.simulation.divisionWinProbability,
   };
+  // If a same-day re-run (e.g. a late or retried cron fire) produces an
+  // identical entry apart from the timestamp, keep the original entry
+  // unchanged so the file doesn't diff on a no-op rebuild.
+  const unchanged =
+    existing &&
+    existing.piratesWins === entry.piratesWins &&
+    existing.piratesLosses === entry.piratesLosses &&
+    existing.postseasonProbability === entry.postseasonProbability &&
+    existing.divisionWinProbability === entry.divisionWinProbability;
+  const finalEntry = unchanged ? existing : entry;
+
   history = history.filter((h) => h.date !== entry.date);
-  history.push(entry);
+  history.push(finalEntry);
   history.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
   writeFileSync(historyPath, JSON.stringify(history, null, 2) + "\n");
 }

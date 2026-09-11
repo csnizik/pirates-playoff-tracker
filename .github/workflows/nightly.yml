@@ -1,0 +1,73 @@
+name: Nightly data refresh
+
+on:
+  schedule:
+    # 0 8 * * * UTC is 3:00 AM America/Chicago while Central Daylight Time is
+    # in effect (UTC-5). After the November DST change back to Central
+    # Standard Time (UTC-6), this same cron fires at 2:00 AM Central instead
+    # of 3:00 AM. The 2026 MLB regular season ends before that change, so it
+    # does not matter for this project this year. If this workflow is still
+    # running past the DST rollback (e.g. into the postseason), the cron
+    # expression should be revisited.
+    - cron: "0 8 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nightly-data-refresh
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Build data
+        # GitHub's cron scheduler is best effort and can run 5 to 20 minutes
+        # late under load, or occasionally not at all. This job must be safe
+        # to run more than once for the same day: build-data.mjs recomputes
+        # data/current.json and data/.last-good.json from scratch each time,
+        # and de-duplicates data/history.json by date, so re-running it is a
+        # no-op if nothing upstream has changed.
+        run: node scripts/build-data.mjs
+
+      - name: Commit and push if data changed
+        run: |
+          # current.json and .last-good.json always get a fresh generatedAt
+          # timestamp, even on a same-day re-run where nothing else changed
+          # (a late or retried cron fire). Comparing the files as-is would
+          # commit every single run. Compare with generatedAt stripped so a
+          # true no-op re-run produces no commit; history.json is already
+          # de-duplicated by date in build-data.mjs, so a plain diff on it
+          # is safe.
+          CHANGED=0
+          for f in data/current.json data/.last-good.json; do
+            OLD=$(git show "HEAD:$f" 2>/dev/null | jq -S 'del(.generatedAt)' || echo "__missing__")
+            NEW=$(jq -S 'del(.generatedAt)' "$f")
+            if [ "$OLD" != "$NEW" ]; then
+              CHANGED=1
+            fi
+          done
+          if ! git diff --quiet -- data/history.json; then
+            CHANGED=1
+          fi
+
+          if [ "$CHANGED" -eq 0 ]; then
+            echo "No meaningful data changes, nothing to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "Update data for $(date -u +%Y-%m-%d)"
+          git push
