@@ -116,10 +116,13 @@ underway or finished, so a mid-day or evening check-in shows today's results rat
 waiting for the overnight run. This is exactly what running the workflow by hand from
 the Actions tab with the "today" option gets you.
 
-Within that chosen day, each still-live NL team's game (if it has one) renders as one of:
-a final score, a scheduled start time if the game hasn't started yet, or nothing at all
-if the game is currently in progress — this is a once-a-day digest, not a live
-scoreboard, so an in-progress game is only ever reported once it reaches final.
+Within that chosen day, each still-live NL team's game (if it has one) renders as either
+a final score, or a start time if the game isn't final yet — whether it hasn't started or
+is currently in progress. The game itself is never hidden just because it's underway at
+fetch time; this is a once-a-day digest, not a live scoreboard, so it's the score that's
+withheld until final, not the game. A postponed game with no makeup reflected in that
+day's data is the one case that's dropped entirely, since its original start time is no
+longer meaningful.
 
 ## Simulation methodology
 

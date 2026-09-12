@@ -196,11 +196,14 @@ async function buildPayload({ now = new Date(), scoreboardMode } = {}) {
 
   // Scoreboard section: only still-live NL teams (not yet mathematically
   // eliminated), for whichever day scoreboardDate resolved to. A team with
-  // no game that day is omitted; a game already final shows the score; a
-  // game not yet started shows its scheduled time instead of a score. A
-  // game in progress is omitted too - this is a once-a-day digest, not a
-  // live scoreboard, so an in-progress result is only ever reported once
-  // it is final.
+  // no game that day is omitted. A game already final shows the score. A
+  // game that is not yet final - whether it hasn't started or is currently
+  // in progress - is still listed, showing its start time instead of a
+  // score: this is a once-a-day digest, not a live scoreboard, so it never
+  // shows a live or partial score, but the game itself isn't hidden just
+  // because it happens to be underway at fetch time. A postponed game with
+  // no makeup reflected in this day's data is omitted, since its original
+  // start time is no longer meaningful.
   const scoreboardGames = flattenSchedule(raw.scoreboardScheduleResponse);
   const piratesScoreboardStatus = findGameStatusForTeam(scoreboardGames, PIRATES_TEAM_ID);
   const piratesFinalResult = piratesScoreboardStatus?.state === "final" ? piratesScoreboardStatus : null;
@@ -209,7 +212,7 @@ async function buildPayload({ now = new Date(), scoreboardMode } = {}) {
   for (const t of nlTeams) {
     if (eliminatedById.get(t.teamId)) continue;
     const status = findGameStatusForTeam(scoreboardGames, t.teamId);
-    if (!status || status.state === "inProgress") continue;
+    if (!status || status.state === "postponed") continue;
 
     const isPirates = t.teamId === PIRATES_TEAM_ID;
     const base = {

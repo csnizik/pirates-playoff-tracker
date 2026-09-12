@@ -114,13 +114,18 @@ export function computeGamesRemainingByTeam(remainingGames) {
 /**
  * A team's game status from a single day's schedule, or null if it has no
  * game that day at all. Three states a consumer should render differently:
- *   "final"    - game is actually over (see isCompletedGame); score fields set.
- *   "preview"  - not started yet; gameDate (ISO instant) is the scheduled start.
- *   "inProgress" - anything else (live, suspended, a postponed ghost entry
- *                  with no makeup reflected yet). Deliberately not detailed
- *                  further: this tracker is a once-a-day digest, not a
- *                  live scoreboard, so in-progress games are only ever
- *                  reported once they reach "final".
+ *   "final"     - game is actually over (see isCompletedGame); score fields set.
+ *   "scheduled" - not final yet, whether it hasn't started or is currently
+ *                 live/suspended; gameDate (ISO instant) is its start time.
+ *                 This tracker is a once-a-day digest, not a live
+ *                 scoreboard, so a game in this state is still listed (the
+ *                 fan should see there's a game happening) but only ever
+ *                 shows a score once it reaches "final" - never a live or
+ *                 partial one.
+ *   "postponed" - a postponed-game ghost entry with no makeup reflected in
+ *                 this day's data; its original start time is no longer
+ *                 meaningful, so it carries no gameDate and a consumer
+ *                 should typically omit it.
  */
 export function findGameStatusForTeam(dayGames, teamId) {
   const game = dayGames.find(
@@ -143,9 +148,9 @@ export function findGameStatusForTeam(dayGames, teamId) {
     };
   }
 
-  if (game.status?.abstractGameState === "Preview") {
-    return { ...base, state: "preview", gameDate: game.gameDate };
+  if (game.status?.codedGameState === "D") {
+    return { ...base, state: "postponed" };
   }
 
-  return { ...base, state: "inProgress" };
+  return { ...base, state: "scheduled", gameDate: game.gameDate };
 }
