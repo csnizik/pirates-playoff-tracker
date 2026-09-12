@@ -495,16 +495,28 @@ async function main() {
   );
   const isNewData = isNewSinceLastVisit(payload.asOfDate);
 
-  renderMasthead(payload);
-  renderModeBanner(payload);
-  renderStatus(payload, history, isNewData);
-  renderScoreboard(payload, teamMetaById, isNewData);
-  renderStandings(payload, teamMetaById);
-  renderThresholdTable(payload, teamMetaById);
-  renderHeadToHeadNotes(payload);
-  renderSimulation(payload);
-  renderSparkline(history, payload.asOfDate);
-  renderHistogram(payload.simulation.finalWinsDistribution);
+  // Each section renders independently: a bug or an unexpected payload
+  // shape in one (e.g. a stale cached script running against a changed
+  // schema) must not cascade into blanking out every section after it.
+  const sections = [
+    () => renderMasthead(payload),
+    () => renderModeBanner(payload),
+    () => renderStatus(payload, history, isNewData),
+    () => renderScoreboard(payload, teamMetaById, isNewData),
+    () => renderStandings(payload, teamMetaById),
+    () => renderThresholdTable(payload, teamMetaById),
+    () => renderHeadToHeadNotes(payload),
+    () => renderSimulation(payload),
+    () => renderSparkline(history, payload.asOfDate),
+    () => renderHistogram(payload.simulation.finalWinsDistribution),
+  ];
+  for (const render of sections) {
+    try {
+      render();
+    } catch (err) {
+      console.error("Section failed to render:", err);
+    }
+  }
 }
 
 main();

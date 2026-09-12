@@ -6,7 +6,15 @@
   <title>Pirates Playoff Tracker</title>
   <meta name="description" content="Pittsburgh's NL wild card chase, tracked nightly: odds, elimination number, and the math behind them." />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <!--
+    Bump the ?v= query string on the stylesheet and scripts below whenever
+    their content changes in a way that could be incompatible with what a
+    returning visitor's browser has cached (a renamed payload field, a new
+    element id, etc). Without this, a cached old script can run against
+    freshly deployed data and silently break, since the query string is
+    part of the cache key and a bump forces a real fetch.
+  -->
+  <link rel="stylesheet" href="assets/css/styles.css?v=2" />
 </head>
 <body>
   <div class="app">
@@ -194,7 +202,7 @@
     </footer>
   </div>
 
-  <script src="assets/js/app.js" type="module"></script>
-  <script src="assets/js/scenario.js" type="module"></script>
+  <script src="assets/js/app.js?v=2" type="module"></script>
+  <script src="assets/js/scenario.js?v=2" type="module"></script>
 </body>
 </html>
