@@ -38,5 +38,13 @@
     "piratesLosses": 75,
     "postseasonProbability": 0.0002,
     "divisionWinProbability": 0
+  },
+  {
+    "date": "2026-09-15",
+    "generatedAt": "2026-09-16T08:22:18.749Z",
+    "piratesWins": 75,
+    "piratesLosses": 76,
+    "postseasonProbability": 0.00004,
+    "divisionWinProbability": 0
   }
 ]
