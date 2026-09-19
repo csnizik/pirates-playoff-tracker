@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-18T08:21:29.531Z",
+  "generatedAt": "2026-09-19T08:19:14.973Z",
   "season": 2026,
-  "asOfDate": "2026-09-17",
+  "asOfDate": "2026-09-18",
   "mode": "ELIMINATED",
   "pirates": {
     "teamId": 134,
-    "wins": 76,
+    "wins": 77,
     "losses": 77,
-    "gamesPlayed": 153,
-    "gamesRemaining": 9,
-    "winPct": 0.497,
+    "gamesPlayed": 154,
+    "gamesRemaining": 8,
+    "winPct": 0.5,
     "wildCardGamesBack": "8.0",
     "divisionGamesBack": "19.0",
     "thirdSpotHolderTeamId": 135,
-    "eliminationNumberWildCard": 2,
+    "eliminationNumberWildCard": 1,
     "clinchedDivision": false,
     "clinchedWildcard": false,
     "clinchedPostseason": false,
@@ -23,8 +23,21 @@
     "eliminatedPostseason": true
   },
   "scoreboard": {
-    "date": "2026-09-17",
+    "date": "2026-09-18",
     "results": [
+      {
+        "teamId": 144,
+        "abbreviation": "ATL",
+        "isHome": false,
+        "opponentTeamId": 117,
+        "opponentAbbreviation": "HOU",
+        "isPirates": false,
+        "state": "final",
+        "score": 6,
+        "opponentScore": 2,
+        "won": true,
+        "gapToPiratesChange": 0
+      },
       {
         "teamId": 143,
         "abbreviation": "PHI",
@@ -34,29 +47,42 @@
         "isPirates": false,
         "state": "final",
         "score": 3,
-        "opponentScore": 0,
-        "won": true,
-        "gapToPiratesChange": 0
+        "opponentScore": 6,
+        "won": false,
+        "gapToPiratesChange": 1
       },
       {
         "teamId": 158,
         "abbreviation": "MIL",
         "isHome": false,
-        "opponentTeamId": 134,
-        "opponentAbbreviation": "PIT",
+        "opponentTeamId": 110,
+        "opponentAbbreviation": "BAL",
+        "isPirates": false,
+        "state": "final",
+        "score": 6,
+        "opponentScore": 5,
+        "won": true,
+        "gapToPiratesChange": 0
+      },
+      {
+        "teamId": 112,
+        "abbreviation": "CHC",
+        "isHome": false,
+        "opponentTeamId": 113,
+        "opponentAbbreviation": "CIN",
         "isPirates": false,
         "state": "final",
         "score": 4,
-        "opponentScore": 7,
+        "opponentScore": 6,
         "won": false,
         "gapToPiratesChange": 1
       },
       {
         "teamId": 119,
         "abbreviation": "LAD",
-        "isHome": false,
-        "opponentTeamId": 113,
-        "opponentAbbreviation": "CIN",
+        "isHome": true,
+        "opponentTeamId": 137,
+        "opponentAbbreviation": "SF",
         "isPirates": false,
         "state": "final",
         "score": 8,
@@ -67,12 +93,12 @@
       {
         "teamId": 135,
         "abbreviation": "SD",
-        "isHome": false,
-        "opponentTeamId": 115,
-        "opponentAbbreviation": "COL",
+        "isHome": true,
+        "opponentTeamId": 146,
+        "opponentAbbreviation": "MIA",
         "isPirates": false,
         "state": "final",
-        "score": 9,
+        "score": 8,
         "opponentScore": 2,
         "won": true,
         "gapToPiratesChange": 0
@@ -87,18 +113,18 @@
         "abbreviation": "ATL",
         "name": "Atlanta Braves",
         "divisionId": 204,
-        "wins": 89,
+        "wins": 90,
         "losses": 64,
-        "gamesPlayed": 153,
-        "winPct": 0.582,
-        "gamesRemaining": 9,
+        "gamesPlayed": 154,
+        "winPct": 0.584,
+        "gamesRemaining": 8,
         "maxPossibleWins": 98,
         "isDivisionLeader": true,
         "wildCardRank": null,
         "wildCardGamesBack": null,
         "divisionGamesBack": "-",
-        "magicNumberDivision": 5,
-        "streak": "L1",
+        "magicNumberDivision": null,
+        "streak": "W1",
         "clinchedPostseason": false,
         "eliminatedPostseason": false,
         "divisionRecord": {
@@ -116,26 +142,26 @@
         "name": "Philadelphia Phillies",
         "divisionId": 204,
         "wins": 85,
-        "losses": 68,
-        "gamesPlayed": 153,
-        "winPct": 0.556,
-        "gamesRemaining": 9,
-        "maxPossibleWins": 94,
+        "losses": 69,
+        "gamesPlayed": 154,
+        "winPct": 0.552,
+        "gamesRemaining": 8,
+        "maxPossibleWins": 93,
         "isDivisionLeader": false,
         "wildCardRank": 2,
-        "wildCardGamesBack": "+1.0",
-        "divisionGamesBack": "4.0",
+        "wildCardGamesBack": "-",
+        "divisionGamesBack": "5.0",
         "magicNumberDivision": null,
-        "streak": "W2",
+        "streak": "L1",
         "clinchedPostseason": false,
         "eliminatedPostseason": false,
         "divisionRecord": {
           "wins": 27,
-          "losses": 22
+          "losses": 23
         },
         "last20": {
-          "wins": 12,
-          "losses": 8
+          "wins": 11,
+          "losses": 9
         }
       },
       {
@@ -144,17 +170,17 @@
         "name": "Miami Marlins",
         "divisionId": 204,
         "wins": 76,
-        "losses": 77,
-        "gamesPlayed": 153,
-        "winPct": 0.497,
-        "gamesRemaining": 9,
-        "maxPossibleWins": 85,
+        "losses": 78,
+        "gamesPlayed": 154,
+        "winPct": 0.494,
+        "gamesRemaining": 8,
+        "maxPossibleWins": 84,
         "isDivisionLeader": false,
-        "wildCardRank": 5,
-        "wildCardGamesBack": "8.0",
-        "divisionGamesBack": "13.0",
+        "wildCardRank": 6,
+        "wildCardGamesBack": "9.0",
+        "divisionGamesBack": "14.0",
         "magicNumberDivision": null,
-        "streak": "W2",
+        "streak": "L1",
         "clinchedPostseason": false,
         "eliminatedPostseason": true,
         "divisionRecord": {
@@ -162,8 +188,8 @@
           "losses": 27
         },
         "last20": {
-          "wins": 9,
-          "losses": 11
+          "wins": 8,
+          "losses": 12
         }
       },
       {
@@ -171,18 +197,18 @@
         "abbreviation": "WSH",
         "name": "Washington Nationals",
         "divisionId": 204,
-        "wins": 71,
+        "wins": 72,
         "losses": 82,
-        "gamesPlayed": 153,
-        "winPct": 0.464,
-        "gamesRemaining": 9,
+        "gamesPlayed": 154,
+        "winPct": 0.468,
+        "gamesRemaining": 8,
         "maxPossibleWins": 80,
         "isDivisionLeader": false,
         "wildCardRank": 8,
         "wildCardGamesBack": "13.0",
         "divisionGamesBack": "18.0",
         "magicNumberDivision": null,
-        "streak": "L1",
+        "streak": "W1",
         "clinchedPostseason": false,
         "eliminatedPostseason": true,
         "divisionRecord": {
@@ -190,8 +216,8 @@
           "losses": 33
         },
         "last20": {
-          "wins": 9,
-          "losses": 11
+          "wins": 10,
+          "losses": 10
         }
       },
       {
@@ -199,27 +225,27 @@
         "abbreviation": "NYM",
         "name": "New York Mets",
         "divisionId": 204,
-        "wins": 69,
+        "wins": 70,
         "losses": 84,
-        "gamesPlayed": 153,
-        "winPct": 0.451,
-        "gamesRemaining": 9,
+        "gamesPlayed": 154,
+        "winPct": 0.455,
+        "gamesRemaining": 8,
         "maxPossibleWins": 78,
         "isDivisionLeader": false,
         "wildCardRank": 10,
         "wildCardGamesBack": "15.0",
         "divisionGamesBack": "20.0",
         "magicNumberDivision": null,
-        "streak": "L5",
+        "streak": "W1",
         "clinchedPostseason": false,
         "eliminatedPostseason": true,
         "divisionRecord": {
-          "wins": 24,
+          "wins": 25,
           "losses": 22
         },
         "last20": {
-          "wins": 9,
-          "losses": 11
+          "wins": 10,
+          "losses": 10
         }
       },
       {
@@ -227,18 +253,18 @@
         "abbreviation": "MIL",
         "name": "Milwaukee Brewers",
         "divisionId": 205,
-        "wins": 95,
+        "wins": 96,
         "losses": 58,
-        "gamesPlayed": 153,
-        "winPct": 0.621,
-        "gamesRemaining": 9,
+        "gamesPlayed": 154,
+        "winPct": 0.623,
+        "gamesRemaining": 8,
         "maxPossibleWins": 104,
         "isDivisionLeader": true,
         "wildCardRank": null,
         "wildCardGamesBack": null,
         "divisionGamesBack": "-",
         "magicNumberDivision": null,
-        "streak": "L1",
+        "streak": "W1",
         "clinchedPostseason": true,
         "eliminatedPostseason": false,
         "divisionRecord": {
@@ -256,22 +282,22 @@
         "name": "Chicago Cubs",
         "divisionId": 205,
         "wins": 85,
-        "losses": 68,
-        "gamesPlayed": 153,
-        "winPct": 0.556,
-        "gamesRemaining": 9,
-        "maxPossibleWins": 94,
+        "losses": 69,
+        "gamesPlayed": 154,
+        "winPct": 0.552,
+        "gamesRemaining": 8,
+        "maxPossibleWins": 93,
         "isDivisionLeader": false,
         "wildCardRank": 1,
-        "wildCardGamesBack": "+1.0",
-        "divisionGamesBack": "10.0",
+        "wildCardGamesBack": "-",
+        "divisionGamesBack": "11.0",
         "magicNumberDivision": null,
-        "streak": "W1",
+        "streak": "L1",
         "clinchedPostseason": false,
         "eliminatedPostseason": false,
         "divisionRecord": {
           "wins": 24,
-          "losses": 25
+          "losses": 26
         },
         "last20": {
           "wins": 9,
@@ -283,18 +309,18 @@
         "abbreviation": "PIT",
         "name": "Pittsburgh Pirates",
         "divisionId": 205,
-        "wins": 76,
+        "wins": 77,
         "losses": 77,
-        "gamesPlayed": 153,
-        "winPct": 0.497,
-        "gamesRemaining": 9,
+        "gamesPlayed": 154,
+        "winPct": 0.5,
+        "gamesRemaining": 8,
         "maxPossibleWins": 85,
         "isDivisionLeader": false,
-        "wildCardRank": 6,
+        "wildCardRank": 5,
         "wildCardGamesBack": "8.0",
         "divisionGamesBack": "19.0",
         "magicNumberDivision": null,
-        "streak": "W1",
+        "streak": "W2",
         "clinchedPostseason": false,
         "eliminatedPostseason": true,
         "divisionRecord": {
@@ -312,17 +338,17 @@
         "name": "St. Louis Cardinals",
         "divisionId": 205,
         "wins": 75,
-        "losses": 78,
-        "gamesPlayed": 153,
-        "winPct": 0.49,
-        "gamesRemaining": 9,
-        "maxPossibleWins": 84,
+        "losses": 79,
+        "gamesPlayed": 154,
+        "winPct": 0.487,
+        "gamesRemaining": 8,
+        "maxPossibleWins": 83,
         "isDivisionLeader": false,
         "wildCardRank": 7,
-        "wildCardGamesBack": "9.0",
-        "divisionGamesBack": "20.0",
+        "wildCardGamesBack": "10.0",
+        "divisionGamesBack": "21.0",
         "magicNumberDivision": null,
-        "streak": "L2",
+        "streak": "L3",
         "clinchedPostseason": false,
         "eliminatedPostseason": true,
         "divisionRecord": {
@@ -339,22 +365,22 @@
         "abbreviation": "CIN",
         "name": "Cincinnati Reds",
         "divisionId": 205,
-        "wins": 71,
+        "wins": 72,
         "losses": 82,
-        "gamesPlayed": 153,
-        "winPct": 0.464,
-        "gamesRemaining": 9,
+        "gamesPlayed": 154,
+        "winPct": 0.468,
+        "gamesRemaining": 8,
         "maxPossibleWins": 80,
         "isDivisionLeader": false,
         "wildCardRank": 9,
         "wildCardGamesBack": "13.0",
         "divisionGamesBack": "24.0",
         "magicNumberDivision": null,
-        "streak": "L1",
+        "streak": "W1",
         "clinchedPostseason": false,
         "eliminatedPostseason": true,
         "divisionRecord": {
-          "wins": 18,
+          "wins": 19,
           "losses": 31
         },
         "last20": {
@@ -367,27 +393,27 @@
         "abbreviation": "LAD",
         "name": "Los Angeles Dodgers",
         "divisionId": 203,
-        "wins": 93,
+        "wins": 94,
         "losses": 60,
-        "gamesPlayed": 153,
-        "winPct": 0.608,
-        "gamesRemaining": 9,
+        "gamesPlayed": 154,
+        "winPct": 0.61,
+        "gamesRemaining": 8,
         "maxPossibleWins": 102,
         "isDivisionLeader": true,
         "wildCardRank": null,
         "wildCardGamesBack": null,
         "divisionGamesBack": "-",
         "magicNumberDivision": null,
-        "streak": "W1",
-        "clinchedPostseason": false,
+        "streak": "W2",
+        "clinchedPostseason": true,
         "eliminatedPostseason": false,
         "divisionRecord": {
-          "wins": 26,
+          "wins": 27,
           "losses": 17
         },
         "last20": {
-          "wins": 13,
-          "losses": 7
+          "wins": 14,
+          "losses": 6
         }
       },
       {
@@ -395,18 +421,18 @@
         "abbreviation": "SD",
         "name": "San Diego Padres",
         "divisionId": 203,
-        "wins": 84,
+        "wins": 85,
         "losses": 69,
-        "gamesPlayed": 153,
-        "winPct": 0.549,
-        "gamesRemaining": 9,
+        "gamesPlayed": 154,
+        "winPct": 0.552,
+        "gamesRemaining": 8,
         "maxPossibleWins": 93,
         "isDivisionLeader": false,
         "wildCardRank": 3,
         "wildCardGamesBack": "-",
         "divisionGamesBack": "9.0",
         "magicNumberDivision": null,
-        "streak": "W2",
+        "streak": "W3",
         "clinchedPostseason": false,
         "eliminatedPostseason": false,
         "divisionRecord": {
@@ -424,26 +450,26 @@
         "name": "Arizona Diamondbacks",
         "divisionId": 203,
         "wins": 80,
-        "losses": 73,
-        "gamesPlayed": 153,
-        "winPct": 0.523,
-        "gamesRemaining": 9,
-        "maxPossibleWins": 89,
+        "losses": 74,
+        "gamesPlayed": 154,
+        "winPct": 0.519,
+        "gamesRemaining": 8,
+        "maxPossibleWins": 88,
         "isDivisionLeader": false,
         "wildCardRank": 4,
-        "wildCardGamesBack": "4.0",
-        "divisionGamesBack": "13.0",
+        "wildCardGamesBack": "5.0",
+        "divisionGamesBack": "14.0",
         "magicNumberDivision": null,
-        "streak": "L2",
+        "streak": "L3",
         "clinchedPostseason": false,
-        "eliminatedPostseason": false,
+        "eliminatedPostseason": true,
         "divisionRecord": {
           "wins": 28,
           "losses": 18
         },
         "last20": {
-          "wins": 10,
-          "losses": 10
+          "wins": 9,
+          "losses": 11
         }
       },
       {
@@ -452,26 +478,26 @@
         "name": "San Francisco Giants",
         "divisionId": 203,
         "wins": 64,
-        "losses": 89,
-        "gamesPlayed": 153,
-        "winPct": 0.418,
-        "gamesRemaining": 9,
-        "maxPossibleWins": 73,
+        "losses": 90,
+        "gamesPlayed": 154,
+        "winPct": 0.416,
+        "gamesRemaining": 8,
+        "maxPossibleWins": 72,
         "isDivisionLeader": false,
         "wildCardRank": 11,
-        "wildCardGamesBack": "20.0",
-        "divisionGamesBack": "29.0",
+        "wildCardGamesBack": "21.0",
+        "divisionGamesBack": "30.0",
         "magicNumberDivision": null,
-        "streak": "W2",
+        "streak": "L1",
         "clinchedPostseason": false,
         "eliminatedPostseason": true,
         "divisionRecord": {
           "wins": 17,
-          "losses": 29
+          "losses": 30
         },
         "last20": {
-          "wins": 10,
-          "losses": 10
+          "wins": 9,
+          "losses": 11
         }
       },
       {
@@ -480,17 +506,17 @@
         "name": "Colorado Rockies",
         "divisionId": 203,
         "wins": 56,
-        "losses": 97,
-        "gamesPlayed": 153,
-        "winPct": 0.366,
-        "gamesRemaining": 9,
-        "maxPossibleWins": 65,
+        "losses": 98,
+        "gamesPlayed": 154,
+        "winPct": 0.364,
+        "gamesRemaining": 8,
+        "maxPossibleWins": 64,
         "isDivisionLeader": false,
         "wildCardRank": 12,
-        "wildCardGamesBack": "28.0",
-        "divisionGamesBack": "37.0",
+        "wildCardGamesBack": "29.0",
+        "divisionGamesBack": "38.0",
         "magicNumberDivision": null,
-        "streak": "L2",
+        "streak": "L3",
         "clinchedPostseason": false,
         "eliminatedPostseason": true,
         "divisionRecord": {
@@ -505,11 +531,11 @@
     ]
   },
   "thresholdTable": {
-    "piratesGamesRemaining": 9,
+    "piratesGamesRemaining": 8,
     "piratesCeiling": 85,
     "rows": [
       {
-        "piratesFinishWins": 76,
+        "piratesFinishWins": 77,
         "piratesWinsFromHere": 0,
         "rivals": [
           {
@@ -542,7 +568,7 @@
           },
           {
             "teamId": 138,
-            "maxWinsToStayBehind": 0
+            "maxWinsToStayBehind": 1
           },
           {
             "teamId": 113,
@@ -562,16 +588,16 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 115,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           }
         ]
       },
       {
-        "piratesFinishWins": 77,
+        "piratesFinishWins": 78,
         "piratesWinsFromHere": 1,
         "rivals": [
           {
@@ -584,7 +610,7 @@
           },
           {
             "teamId": 146,
-            "maxWinsToStayBehind": 0
+            "maxWinsToStayBehind": 1
           },
           {
             "teamId": 120,
@@ -604,7 +630,7 @@
           },
           {
             "teamId": 138,
-            "maxWinsToStayBehind": 1
+            "maxWinsToStayBehind": 2
           },
           {
             "teamId": 113,
@@ -624,16 +650,16 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 115,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           }
         ]
       },
       {
-        "piratesFinishWins": 78,
+        "piratesFinishWins": 79,
         "piratesWinsFromHere": 2,
         "rivals": [
           {
@@ -646,7 +672,7 @@
           },
           {
             "teamId": 146,
-            "maxWinsToStayBehind": 1
+            "maxWinsToStayBehind": 2
           },
           {
             "teamId": 120,
@@ -666,7 +692,7 @@
           },
           {
             "teamId": 138,
-            "maxWinsToStayBehind": 2
+            "maxWinsToStayBehind": 3
           },
           {
             "teamId": 113,
@@ -686,16 +712,16 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 115,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           }
         ]
       },
       {
-        "piratesFinishWins": 79,
+        "piratesFinishWins": 80,
         "piratesWinsFromHere": 3,
         "rivals": [
           {
@@ -708,7 +734,7 @@
           },
           {
             "teamId": 146,
-            "maxWinsToStayBehind": 2
+            "maxWinsToStayBehind": 3
           },
           {
             "teamId": 120,
@@ -716,7 +742,7 @@
           },
           {
             "teamId": 121,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 158,
@@ -728,7 +754,7 @@
           },
           {
             "teamId": 138,
-            "maxWinsToStayBehind": 3
+            "maxWinsToStayBehind": 4
           },
           {
             "teamId": 113,
@@ -748,16 +774,16 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 115,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           }
         ]
       },
       {
-        "piratesFinishWins": 80,
+        "piratesFinishWins": 81,
         "piratesWinsFromHere": 4,
         "rivals": [
           {
@@ -770,7 +796,7 @@
           },
           {
             "teamId": 146,
-            "maxWinsToStayBehind": 3
+            "maxWinsToStayBehind": 4
           },
           {
             "teamId": 120,
@@ -778,7 +804,7 @@
           },
           {
             "teamId": 121,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 158,
@@ -790,7 +816,7 @@
           },
           {
             "teamId": 138,
-            "maxWinsToStayBehind": 4
+            "maxWinsToStayBehind": 5
           },
           {
             "teamId": 113,
@@ -810,16 +836,16 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 115,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           }
         ]
       },
       {
-        "piratesFinishWins": 81,
+        "piratesFinishWins": 82,
         "piratesWinsFromHere": 5,
         "rivals": [
           {
@@ -832,77 +858,15 @@
           },
           {
             "teamId": 146,
-            "maxWinsToStayBehind": 4
-          },
-          {
-            "teamId": 120,
-            "maxWinsToStayBehind": 9
-          },
-          {
-            "teamId": 121,
-            "maxWinsToStayBehind": 9
-          },
-          {
-            "teamId": 158,
-            "maxWinsToStayBehind": 0
-          },
-          {
-            "teamId": 112,
-            "maxWinsToStayBehind": 0
-          },
-          {
-            "teamId": 138,
-            "maxWinsToStayBehind": 5
-          },
-          {
-            "teamId": 113,
-            "maxWinsToStayBehind": 9
-          },
-          {
-            "teamId": 119,
-            "maxWinsToStayBehind": 0
-          },
-          {
-            "teamId": 135,
-            "maxWinsToStayBehind": 0
-          },
-          {
-            "teamId": 109,
-            "maxWinsToStayBehind": 0
-          },
-          {
-            "teamId": 137,
-            "maxWinsToStayBehind": 9
-          },
-          {
-            "teamId": 115,
-            "maxWinsToStayBehind": 9
-          }
-        ]
-      },
-      {
-        "piratesFinishWins": 82,
-        "piratesWinsFromHere": 6,
-        "rivals": [
-          {
-            "teamId": 144,
-            "maxWinsToStayBehind": 0
-          },
-          {
-            "teamId": 143,
-            "maxWinsToStayBehind": 0
-          },
-          {
-            "teamId": 146,
             "maxWinsToStayBehind": 5
           },
           {
             "teamId": 120,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 121,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 158,
@@ -918,7 +882,7 @@
           },
           {
             "teamId": 113,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 119,
@@ -934,17 +898,17 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 115,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           }
         ]
       },
       {
         "piratesFinishWins": 83,
-        "piratesWinsFromHere": 7,
+        "piratesWinsFromHere": 6,
         "rivals": [
           {
             "teamId": 144,
@@ -960,11 +924,11 @@
           },
           {
             "teamId": 120,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 121,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 158,
@@ -980,7 +944,7 @@
           },
           {
             "teamId": 113,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 119,
@@ -996,17 +960,17 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 115,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           }
         ]
       },
       {
         "piratesFinishWins": 84,
-        "piratesWinsFromHere": 8,
+        "piratesWinsFromHere": 7,
         "rivals": [
           {
             "teamId": 144,
@@ -1022,11 +986,11 @@
           },
           {
             "teamId": 120,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 121,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 158,
@@ -1042,7 +1006,7 @@
           },
           {
             "teamId": 113,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 119,
@@ -1058,17 +1022,17 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 115,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           }
         ]
       },
       {
         "piratesFinishWins": 85,
-        "piratesWinsFromHere": 9,
+        "piratesWinsFromHere": 8,
         "rivals": [
           {
             "teamId": 144,
@@ -1084,11 +1048,11 @@
           },
           {
             "teamId": 120,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 121,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 158,
@@ -1100,11 +1064,11 @@
           },
           {
             "teamId": 138,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 113,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 119,
@@ -1120,11 +1084,11 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           },
           {
             "teamId": 115,
-            "maxWinsToStayBehind": 9
+            "maxWinsToStayBehind": 8
           }
         ]
       }
@@ -1132,8 +1096,8 @@
     "rivals": [
       {
         "teamId": 144,
-        "wins": 89,
-        "gamesRemaining": 9,
+        "wins": 90,
+        "gamesRemaining": 8,
         "maxPossibleWins": 98,
         "isDivisionLeader": true,
         "isStillAThreat": true
@@ -1141,39 +1105,39 @@
       {
         "teamId": 143,
         "wins": 85,
-        "gamesRemaining": 9,
-        "maxPossibleWins": 94,
+        "gamesRemaining": 8,
+        "maxPossibleWins": 93,
         "isDivisionLeader": false,
         "isStillAThreat": true
       },
       {
         "teamId": 146,
         "wins": 76,
-        "gamesRemaining": 9,
-        "maxPossibleWins": 85,
+        "gamesRemaining": 8,
+        "maxPossibleWins": 84,
         "isDivisionLeader": false,
-        "isStillAThreat": true
+        "isStillAThreat": false
       },
       {
         "teamId": 120,
-        "wins": 71,
-        "gamesRemaining": 9,
+        "wins": 72,
+        "gamesRemaining": 8,
         "maxPossibleWins": 80,
         "isDivisionLeader": false,
         "isStillAThreat": false
       },
       {
         "teamId": 121,
-        "wins": 69,
-        "gamesRemaining": 9,
+        "wins": 70,
+        "gamesRemaining": 8,
         "maxPossibleWins": 78,
         "isDivisionLeader": false,
         "isStillAThreat": false
       },
       {
         "teamId": 158,
-        "wins": 95,
-        "gamesRemaining": 9,
+        "wins": 96,
+        "gamesRemaining": 8,
         "maxPossibleWins": 104,
         "isDivisionLeader": true,
         "isStillAThreat": true
@@ -1181,39 +1145,39 @@
       {
         "teamId": 112,
         "wins": 85,
-        "gamesRemaining": 9,
-        "maxPossibleWins": 94,
+        "gamesRemaining": 8,
+        "maxPossibleWins": 93,
         "isDivisionLeader": false,
         "isStillAThreat": true
       },
       {
         "teamId": 138,
         "wins": 75,
-        "gamesRemaining": 9,
-        "maxPossibleWins": 84,
+        "gamesRemaining": 8,
+        "maxPossibleWins": 83,
         "isDivisionLeader": false,
         "isStillAThreat": false
       },
       {
         "teamId": 113,
-        "wins": 71,
-        "gamesRemaining": 9,
+        "wins": 72,
+        "gamesRemaining": 8,
         "maxPossibleWins": 80,
         "isDivisionLeader": false,
         "isStillAThreat": false
       },
       {
         "teamId": 119,
-        "wins": 93,
-        "gamesRemaining": 9,
+        "wins": 94,
+        "gamesRemaining": 8,
         "maxPossibleWins": 102,
         "isDivisionLeader": true,
         "isStillAThreat": true
       },
       {
         "teamId": 135,
-        "wins": 84,
-        "gamesRemaining": 9,
+        "wins": 85,
+        "gamesRemaining": 8,
         "maxPossibleWins": 93,
         "isDivisionLeader": false,
         "isStillAThreat": true
@@ -1221,24 +1185,24 @@
       {
         "teamId": 109,
         "wins": 80,
-        "gamesRemaining": 9,
-        "maxPossibleWins": 89,
+        "gamesRemaining": 8,
+        "maxPossibleWins": 88,
         "isDivisionLeader": false,
         "isStillAThreat": true
       },
       {
         "teamId": 137,
         "wins": 64,
-        "gamesRemaining": 9,
-        "maxPossibleWins": 73,
+        "gamesRemaining": 8,
+        "maxPossibleWins": 72,
         "isDivisionLeader": false,
         "isStillAThreat": false
       },
       {
         "teamId": 115,
         "wins": 56,
-        "gamesRemaining": 9,
-        "maxPossibleWins": 65,
+        "gamesRemaining": 8,
+        "maxPossibleWins": 64,
         "isDivisionLeader": false,
         "isStillAThreat": false
       }
@@ -1248,34 +1212,10 @@
     {
       "teamAId": 119,
       "teamBId": 137,
-      "gamesRemaining": 6,
+      "gamesRemaining": 5,
       "guaranteedWinsToSeriesWinner": 3,
       "teamAAbbreviation": "LAD",
       "teamBAbbreviation": "SF"
-    },
-    {
-      "teamAId": 135,
-      "teamBId": 146,
-      "gamesRemaining": 3,
-      "guaranteedWinsToSeriesWinner": 2,
-      "teamAAbbreviation": "SD",
-      "teamBAbbreviation": "MIA"
-    },
-    {
-      "teamAId": 121,
-      "teamBId": 143,
-      "gamesRemaining": 3,
-      "guaranteedWinsToSeriesWinner": 2,
-      "teamAAbbreviation": "NYM",
-      "teamBAbbreviation": "PHI"
-    },
-    {
-      "teamAId": 112,
-      "teamBId": 113,
-      "gamesRemaining": 3,
-      "guaranteedWinsToSeriesWinner": 2,
-      "teamAAbbreviation": "CHC",
-      "teamBAbbreviation": "CIN"
     },
     {
       "teamAId": 143,
@@ -1292,14 +1232,6 @@
       "guaranteedWinsToSeriesWinner": 2,
       "teamAAbbreviation": "LAD",
       "teamBAbbreviation": "SD"
-    },
-    {
-      "teamAId": 109,
-      "teamBId": 115,
-      "gamesRemaining": 3,
-      "guaranteedWinsToSeriesWinner": 2,
-      "teamAAbbreviation": "AZ",
-      "teamBAbbreviation": "COL"
     },
     {
       "teamAId": 112,
@@ -1340,33 +1272,37 @@
       "guaranteedWinsToSeriesWinner": 2,
       "teamAAbbreviation": "ATL",
       "teamBAbbreviation": "MIA"
+    },
+    {
+      "teamAId": 135,
+      "teamBId": 146,
+      "gamesRemaining": 2,
+      "guaranteedWinsToSeriesWinner": 1,
+      "teamAAbbreviation": "SD",
+      "teamBAbbreviation": "MIA"
+    },
+    {
+      "teamAId": 121,
+      "teamBId": 143,
+      "gamesRemaining": 2,
+      "guaranteedWinsToSeriesWinner": 1,
+      "teamAAbbreviation": "NYM",
+      "teamBAbbreviation": "PHI"
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 113,
+      "gamesRemaining": 2,
+      "guaranteedWinsToSeriesWinner": 1,
+      "teamAAbbreviation": "CHC",
+      "teamBAbbreviation": "CIN"
     }
   ],
   "headToHeadRemaining": [
     {
       "teamAId": 119,
       "teamBId": 137,
-      "gamesRemaining": 6
-    },
-    {
-      "teamAId": 120,
-      "teamBId": 138,
-      "gamesRemaining": 3
-    },
-    {
-      "teamAId": 135,
-      "teamBId": 146,
-      "gamesRemaining": 3
-    },
-    {
-      "teamAId": 121,
-      "teamBId": 143,
-      "gamesRemaining": 3
-    },
-    {
-      "teamAId": 112,
-      "teamBId": 113,
-      "gamesRemaining": 3
+      "gamesRemaining": 5
     },
     {
       "teamAId": 134,
@@ -1417,6 +1353,26 @@
       "teamAId": 144,
       "teamBId": 146,
       "gamesRemaining": 3
+    },
+    {
+      "teamAId": 120,
+      "teamBId": 138,
+      "gamesRemaining": 2
+    },
+    {
+      "teamAId": 135,
+      "teamBId": 146,
+      "gamesRemaining": 2
+    },
+    {
+      "teamAId": 121,
+      "teamBId": 143,
+      "gamesRemaining": 2
+    },
+    {
+      "teamAId": 112,
+      "teamBId": 113,
+      "gamesRemaining": 2
     }
   ],
   "headToHeadRecords": [
@@ -1507,7 +1463,7 @@
     {
       "teamAId": 120,
       "teamBId": 138,
-      "teamAWins": 1,
+      "teamAWins": 2,
       "teamBWins": 2
     },
     {
@@ -1621,7 +1577,7 @@
     {
       "teamAId": 119,
       "teamBId": 137,
-      "teamAWins": 3,
+      "teamAWins": 4,
       "teamBWins": 4
     },
     {
@@ -1718,7 +1674,7 @@
       "teamAId": 112,
       "teamBId": 113,
       "teamAWins": 7,
-      "teamBWins": 3
+      "teamBWins": 4
     },
     {
       "teamAId": 138,
@@ -1969,7 +1925,7 @@
     {
       "teamAId": 121,
       "teamBId": 143,
-      "teamAWins": 4,
+      "teamAWins": 5,
       "teamBWins": 6
     },
     {
@@ -2017,7 +1973,7 @@
     {
       "teamAId": 135,
       "teamBId": 146,
-      "teamAWins": 3,
+      "teamAWins": 4,
       "teamBWins": 0
     },
     {
@@ -2052,7 +2008,7 @@
     }
   ],
   "simulation": {
-    "seed": 1161904096,
+    "seed": 1161904097,
     "iterations": 25000,
     "postseasonProbability": 0,
     "divisionWinProbability": 0,
@@ -2063,44 +2019,40 @@
     },
     "finalWinsDistribution": [
       {
-        "wins": 76,
-        "probability": 0.00064
-      },
-      {
         "wins": 77,
-        "probability": 0.009
+        "probability": 0.00192
       },
       {
         "wins": 78,
-        "probability": 0.04292
+        "probability": 0.01864
       },
       {
         "wins": 79,
-        "probability": 0.12272
+        "probability": 0.07588
       },
       {
         "wins": 80,
-        "probability": 0.22068
+        "probability": 0.17752
       },
       {
         "wins": 81,
-        "probability": 0.2604
+        "probability": 0.26832
       },
       {
         "wins": 82,
-        "probability": 0.20544
+        "probability": 0.25036
       },
       {
         "wins": 83,
-        "probability": 0.10432
+        "probability": 0.15148
       },
       {
         "wins": 84,
-        "probability": 0.02884
+        "probability": 0.04892
       },
       {
         "wins": 85,
-        "probability": 0.00504
+        "probability": 0.00696
       }
     ]
   },
