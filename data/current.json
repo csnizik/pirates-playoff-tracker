@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T08:24:58.733Z",
+  "generatedAt": "2026-09-22T08:22:10.096Z",
   "season": 2026,
-  "asOfDate": "2026-09-20",
+  "asOfDate": "2026-09-21",
   "mode": "ELIMINATED",
   "pirates": {
     "teamId": 134,
@@ -23,87 +23,8 @@
     "eliminatedPostseason": true
   },
   "scoreboard": {
-    "date": "2026-09-20",
-    "results": [
-      {
-        "teamId": 144,
-        "abbreviation": "ATL",
-        "isHome": false,
-        "opponentTeamId": 117,
-        "opponentAbbreviation": "HOU",
-        "isPirates": false,
-        "state": "final",
-        "score": 4,
-        "opponentScore": 2,
-        "won": true,
-        "gapToPiratesChange": 0
-      },
-      {
-        "teamId": 143,
-        "abbreviation": "PHI",
-        "isHome": false,
-        "opponentTeamId": 121,
-        "opponentAbbreviation": "NYM",
-        "isPirates": false,
-        "state": "final",
-        "score": 7,
-        "opponentScore": 2,
-        "won": true,
-        "gapToPiratesChange": 0
-      },
-      {
-        "teamId": 158,
-        "abbreviation": "MIL",
-        "isHome": false,
-        "opponentTeamId": 110,
-        "opponentAbbreviation": "BAL",
-        "isPirates": false,
-        "state": "final",
-        "score": 3,
-        "opponentScore": 0,
-        "won": true,
-        "gapToPiratesChange": 0
-      },
-      {
-        "teamId": 112,
-        "abbreviation": "CHC",
-        "isHome": false,
-        "opponentTeamId": 113,
-        "opponentAbbreviation": "CIN",
-        "isPirates": false,
-        "state": "final",
-        "score": 9,
-        "opponentScore": 1,
-        "won": true,
-        "gapToPiratesChange": 0
-      },
-      {
-        "teamId": 119,
-        "abbreviation": "LAD",
-        "isHome": true,
-        "opponentTeamId": 137,
-        "opponentAbbreviation": "SF",
-        "isPirates": false,
-        "state": "final",
-        "score": 3,
-        "opponentScore": 1,
-        "won": true,
-        "gapToPiratesChange": 0
-      },
-      {
-        "teamId": 135,
-        "abbreviation": "SD",
-        "isHome": true,
-        "opponentTeamId": 146,
-        "opponentAbbreviation": "MIA",
-        "isPirates": false,
-        "state": "final",
-        "score": 7,
-        "opponentScore": 3,
-        "won": true,
-        "gapToPiratesChange": 0
-      }
-    ]
+    "date": "2026-09-21",
+    "results": []
   },
   "nlWildCard": {
     "leagueId": 104,
@@ -198,17 +119,17 @@
         "name": "Washington Nationals",
         "divisionId": 204,
         "wins": 73,
-        "losses": 83,
-        "gamesPlayed": 156,
-        "winPct": 0.468,
-        "gamesRemaining": 6,
-        "maxPossibleWins": 79,
+        "losses": 84,
+        "gamesPlayed": 157,
+        "winPct": 0.465,
+        "gamesRemaining": 5,
+        "maxPossibleWins": 78,
         "isDivisionLeader": false,
         "wildCardRank": 8,
-        "wildCardGamesBack": "13.0",
-        "divisionGamesBack": "19.0",
+        "wildCardGamesBack": "13.5",
+        "divisionGamesBack": "19.5",
         "magicNumberDivision": null,
-        "streak": "L1",
+        "streak": "L2",
         "clinchedPostseason": false,
         "eliminatedPostseason": true,
         "divisionRecord": {
@@ -216,8 +137,8 @@
           "losses": 33
         },
         "last20": {
-          "wins": 10,
-          "losses": 10
+          "wins": 9,
+          "losses": 11
         }
       },
       {
@@ -477,18 +398,18 @@
         "abbreviation": "SF",
         "name": "San Francisco Giants",
         "divisionId": 203,
-        "wins": 64,
+        "wins": 65,
         "losses": 92,
-        "gamesPlayed": 156,
-        "winPct": 0.41,
-        "gamesRemaining": 6,
+        "gamesPlayed": 157,
+        "winPct": 0.414,
+        "gamesRemaining": 5,
         "maxPossibleWins": 70,
         "isDivisionLeader": false,
         "wildCardRank": 11,
-        "wildCardGamesBack": "22.0",
-        "divisionGamesBack": "32.0",
+        "wildCardGamesBack": "21.5",
+        "divisionGamesBack": "31.5",
         "magicNumberDivision": null,
-        "streak": "L3",
+        "streak": "W1",
         "clinchedPostseason": false,
         "eliminatedPostseason": true,
         "divisionRecord": {
@@ -588,7 +509,7 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 6
+            "maxWinsToStayBehind": 5
           },
           {
             "teamId": 115,
@@ -614,7 +535,7 @@
           },
           {
             "teamId": 120,
-            "maxWinsToStayBehind": 6
+            "maxWinsToStayBehind": 5
           },
           {
             "teamId": 121,
@@ -650,7 +571,7 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 6
+            "maxWinsToStayBehind": 5
           },
           {
             "teamId": 115,
@@ -676,7 +597,7 @@
           },
           {
             "teamId": 120,
-            "maxWinsToStayBehind": 6
+            "maxWinsToStayBehind": 5
           },
           {
             "teamId": 121,
@@ -712,7 +633,7 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 6
+            "maxWinsToStayBehind": 5
           },
           {
             "teamId": 115,
@@ -738,7 +659,7 @@
           },
           {
             "teamId": 120,
-            "maxWinsToStayBehind": 6
+            "maxWinsToStayBehind": 5
           },
           {
             "teamId": 121,
@@ -774,7 +695,7 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 6
+            "maxWinsToStayBehind": 5
           },
           {
             "teamId": 115,
@@ -800,7 +721,7 @@
           },
           {
             "teamId": 120,
-            "maxWinsToStayBehind": 6
+            "maxWinsToStayBehind": 5
           },
           {
             "teamId": 121,
@@ -836,7 +757,7 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 6
+            "maxWinsToStayBehind": 5
           },
           {
             "teamId": 115,
@@ -862,7 +783,7 @@
           },
           {
             "teamId": 120,
-            "maxWinsToStayBehind": 6
+            "maxWinsToStayBehind": 5
           },
           {
             "teamId": 121,
@@ -898,7 +819,7 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 6
+            "maxWinsToStayBehind": 5
           },
           {
             "teamId": 115,
@@ -924,7 +845,7 @@
           },
           {
             "teamId": 120,
-            "maxWinsToStayBehind": 6
+            "maxWinsToStayBehind": 5
           },
           {
             "teamId": 121,
@@ -960,7 +881,7 @@
           },
           {
             "teamId": 137,
-            "maxWinsToStayBehind": 6
+            "maxWinsToStayBehind": 5
           },
           {
             "teamId": 115,
@@ -997,8 +918,8 @@
       {
         "teamId": 120,
         "wins": 73,
-        "gamesRemaining": 6,
-        "maxPossibleWins": 79,
+        "gamesRemaining": 5,
+        "maxPossibleWins": 78,
         "isDivisionLeader": false,
         "isStillAThreat": false
       },
@@ -1068,8 +989,8 @@
       },
       {
         "teamId": 137,
-        "wins": 64,
-        "gamesRemaining": 6,
+        "wins": 65,
+        "gamesRemaining": 5,
         "maxPossibleWins": 70,
         "isDivisionLeader": false,
         "isStillAThreat": false
@@ -1840,7 +1761,7 @@
     }
   ],
   "simulation": {
-    "seed": 1161904120,
+    "seed": 1161904121,
     "iterations": 25000,
     "postseasonProbability": 0,
     "divisionWinProbability": 0,
@@ -1852,31 +1773,31 @@
     "finalWinsDistribution": [
       {
         "wins": 79,
-        "probability": 0.01092
+        "probability": 0.01128
       },
       {
         "wins": 80,
-        "probability": 0.07444
+        "probability": 0.07736
       },
       {
         "wins": 81,
-        "probability": 0.20324
+        "probability": 0.20644
       },
       {
         "wins": 82,
-        "probability": 0.31268
+        "probability": 0.30736
       },
       {
         "wins": 83,
-        "probability": 0.264
+        "probability": 0.2646
       },
       {
         "wins": 84,
-        "probability": 0.11352
+        "probability": 0.11232
       },
       {
         "wins": 85,
-        "probability": 0.0212
+        "probability": 0.02064
       }
     ]
   },
