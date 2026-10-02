@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-01T08:24:32.033Z",
+  "generatedAt": "2026-10-02T08:22:30.787Z",
   "season": 2026,
-  "asOfDate": "2026-09-30",
+  "asOfDate": "2026-10-01",
   "mode": "ELIMINATED",
   "pirates": {
     "teamId": 134,
@@ -23,7 +23,7 @@
     "eliminatedPostseason": true
   },
   "scoreboard": {
-    "date": "2026-09-30",
+    "date": "2026-10-01",
     "results": [
       {
         "teamId": 144,
@@ -33,10 +33,10 @@
         "opponentAbbreviation": "PHI",
         "isPirates": false,
         "state": "final",
-        "score": 3,
-        "opponentScore": 4,
-        "won": false,
-        "gapToPiratesChange": 0.5
+        "score": 6,
+        "opponentScore": 2,
+        "won": true,
+        "gapToPiratesChange": -0.5
       }
     ]
   },
@@ -1282,7 +1282,7 @@
     }
   ],
   "simulation": {
-    "seed": 1162559460,
+    "seed": 1162559461,
     "iterations": 25000,
     "postseasonProbability": 0,
     "divisionWinProbability": 0,
