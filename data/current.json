@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-02T08:22:30.787Z",
+  "generatedAt": "2026-10-03T08:21:10.743Z",
   "season": 2026,
-  "asOfDate": "2026-10-01",
+  "asOfDate": "2026-10-02",
   "mode": "ELIMINATED",
   "pirates": {
     "teamId": 134,
@@ -23,22 +23,8 @@
     "eliminatedPostseason": true
   },
   "scoreboard": {
-    "date": "2026-10-01",
-    "results": [
-      {
-        "teamId": 144,
-        "abbreviation": "ATL",
-        "isHome": true,
-        "opponentTeamId": 143,
-        "opponentAbbreviation": "PHI",
-        "isPirates": false,
-        "state": "final",
-        "score": 6,
-        "opponentScore": 2,
-        "won": true,
-        "gapToPiratesChange": -0.5
-      }
-    ]
+    "date": "2026-10-02",
+    "results": []
   },
   "nlWildCard": {
     "leagueId": 104,
@@ -1282,7 +1268,7 @@
     }
   ],
   "simulation": {
-    "seed": 1162559461,
+    "seed": 1162559462,
     "iterations": 25000,
     "postseasonProbability": 0,
     "divisionWinProbability": 0,
