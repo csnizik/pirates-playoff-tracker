@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-03T08:21:10.743Z",
+  "generatedAt": "2026-10-04T10:11:52.631Z",
   "season": 2026,
-  "asOfDate": "2026-10-02",
+  "asOfDate": "2026-10-03",
   "mode": "ELIMINATED",
   "pirates": {
     "teamId": 134,
@@ -23,8 +23,48 @@
     "eliminatedPostseason": true
   },
   "scoreboard": {
-    "date": "2026-10-02",
-    "results": []
+    "date": "2026-10-03",
+    "results": [
+      {
+        "teamId": 144,
+        "abbreviation": "ATL",
+        "isHome": false,
+        "opponentTeamId": 119,
+        "opponentAbbreviation": "LAD",
+        "isPirates": false,
+        "state": "final",
+        "score": 3,
+        "opponentScore": 5,
+        "won": false,
+        "gapToPiratesChange": 0.5
+      },
+      {
+        "teamId": 158,
+        "abbreviation": "MIL",
+        "isHome": true,
+        "opponentTeamId": 135,
+        "opponentAbbreviation": "SD",
+        "isPirates": false,
+        "state": "final",
+        "score": 3,
+        "opponentScore": 2,
+        "won": true,
+        "gapToPiratesChange": -0.5
+      },
+      {
+        "teamId": 119,
+        "abbreviation": "LAD",
+        "isHome": true,
+        "opponentTeamId": 144,
+        "opponentAbbreviation": "ATL",
+        "isPirates": false,
+        "state": "final",
+        "score": 5,
+        "opponentScore": 3,
+        "won": true,
+        "gapToPiratesChange": -0.5
+      }
+    ]
   },
   "nlWildCard": {
     "leagueId": 104,
@@ -1268,7 +1308,7 @@
     }
   ],
   "simulation": {
-    "seed": 1162559462,
+    "seed": 1162559463,
     "iterations": 25000,
     "postseasonProbability": 0,
     "divisionWinProbability": 0,
