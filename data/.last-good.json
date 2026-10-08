@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-07T08:24:19.700Z",
+  "generatedAt": "2026-10-08T08:24:49.415Z",
   "season": 2026,
-  "asOfDate": "2026-10-06",
+  "asOfDate": "2026-10-07",
   "mode": "ELIMINATED",
   "pirates": {
     "teamId": 134,
@@ -23,7 +23,7 @@
     "eliminatedPostseason": true
   },
   "scoreboard": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "results": [
       {
         "teamId": 144,
@@ -34,7 +34,7 @@
         "isPirates": false,
         "state": "final",
         "score": 1,
-        "opponentScore": 3,
+        "opponentScore": 4,
         "won": false,
         "gapToPiratesChange": 0.5
       },
@@ -47,9 +47,9 @@
         "isPirates": false,
         "state": "final",
         "score": 3,
-        "opponentScore": 4,
-        "won": false,
-        "gapToPiratesChange": 0.5
+        "opponentScore": 1,
+        "won": true,
+        "gapToPiratesChange": -0.5
       },
       {
         "teamId": 119,
@@ -59,7 +59,7 @@
         "opponentAbbreviation": "ATL",
         "isPirates": false,
         "state": "final",
-        "score": 3,
+        "score": 4,
         "opponentScore": 1,
         "won": true,
         "gapToPiratesChange": -0.5
@@ -1308,7 +1308,7 @@
     }
   ],
   "simulation": {
-    "seed": 1162559466,
+    "seed": 1162559467,
     "iterations": 25000,
     "postseasonProbability": 0,
     "divisionWinProbability": 0,
