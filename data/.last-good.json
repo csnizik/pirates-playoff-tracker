@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T08:12:21.062Z",
+  "generatedAt": "2026-11-22T08:12:33.423Z",
   "season": 2026,
-  "asOfDate": "2026-11-20",
+  "asOfDate": "2026-11-21",
   "mode": "ELIMINATED",
   "pirates": {
     "teamId": 134,
@@ -23,7 +23,7 @@
     "eliminatedPostseason": true
   },
   "scoreboard": {
-    "date": "2026-11-20",
+    "date": "2026-11-21",
     "results": []
   },
   "nlWildCard": {
@@ -1268,7 +1268,7 @@
     }
   ],
   "simulation": {
-    "seed": 1162589313,
+    "seed": 1162589314,
     "iterations": 25000,
     "postseasonProbability": 0,
     "divisionWinProbability": 0,
